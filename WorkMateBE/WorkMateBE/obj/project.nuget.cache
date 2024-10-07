@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OVu0TE3i/Ck=",
+  "dgSpecHash": "GB0PDIt+TCo=",
   "success": true,
-  "projectFilePath": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE.csproj",
+  "projectFilePath": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\WorkMateBE.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE.csproj": {}
+    "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\WorkMateBE.csproj": {}
   },
   "projects": {
-    "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE.csproj": {
+    "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\WorkMateBE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE.csproj",
+        "projectUniqueName": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\WorkMateBE.csproj",
         "projectName": "WorkMateBE",
-        "projectPath": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE.csproj",
+        "projectPath": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\WorkMateBE.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\obj\\",
+        "outputPath": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
