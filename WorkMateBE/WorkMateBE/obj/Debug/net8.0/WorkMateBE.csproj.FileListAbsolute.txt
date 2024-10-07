@@ -346,3 +346,11 @@ D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\obj\Debug\net8.0\refint\WorkMateBE.
 D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\obj\Debug\net8.0\WorkMateBE.pdb
 D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\obj\Debug\net8.0\WorkMateBE.genruntimeconfig.cache
 D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\obj\Debug\net8.0\ref\WorkMateBE.dll
+D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

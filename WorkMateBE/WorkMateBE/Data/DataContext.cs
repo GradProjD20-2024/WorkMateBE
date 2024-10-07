@@ -16,7 +16,9 @@ namespace WorkMateBE.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Account>()
+        .Property(a => a.Role)
+        .HasConversion<string>();
         }
     }
 }
