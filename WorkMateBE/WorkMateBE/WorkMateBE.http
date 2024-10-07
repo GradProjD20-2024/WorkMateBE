@@ -1,0 +1,6 @@
+@WorkMateBE_HostAddress = http://localhost:5191
+
+GET {{WorkMateBE_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
