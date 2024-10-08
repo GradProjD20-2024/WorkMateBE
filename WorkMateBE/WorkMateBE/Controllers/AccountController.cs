@@ -68,7 +68,15 @@ namespace WorkMateBE.Controllers
         {
             if (accountDto == null)
                 return BadRequest(ModelState);
-
+            if (_accountRepository.CheckEmployee(accountDto.EmployeeId))
+            {
+                return BadRequest(new ApiResponse
+                {
+                    StatusCode = 400,
+                    Message = "The employee already has an account",
+                    Data = null
+                });
+            }
             // Kiểm tra email đã tồn tại
             if (_accountRepository.CheckEmail(accountDto.Email))
             {
@@ -134,7 +142,7 @@ namespace WorkMateBE.Controllers
             if (existingAccount == null)
                 return NotFound(new ApiResponse
                 {
-                    StatusCode = 404,
+                    StatusCode = 404, 
                     Message = "Account ID not found",
                     Data = null
                 });

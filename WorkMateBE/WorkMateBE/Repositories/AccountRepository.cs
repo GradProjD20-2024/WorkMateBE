@@ -89,6 +89,15 @@ namespace WorkMateBE.Repositories
             _context.Update(existingAccount);
             return Save();
         }
+        public bool CheckEmployee(int employeeId)
+        {
+            var account = _context.Accounts.Where(p => p.EmployeeId == employeeId).FirstOrDefault();
+            if (account == null)
+            {
+                return false;
+            }
+            return true;
+        }
 
         // Lưu thay đổi vào cơ sở dữ liệu
         private bool Save()

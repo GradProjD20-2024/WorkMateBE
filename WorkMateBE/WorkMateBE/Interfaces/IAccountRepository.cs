@@ -13,5 +13,6 @@ namespace WorkMateBE.Interfaces
         Account GetAccountByEmail(string email);
         bool CheckEmail(string email);
         bool Login(AccountLogin accountLogin);
+        bool CheckEmployee(int employeeId);
     }
 }

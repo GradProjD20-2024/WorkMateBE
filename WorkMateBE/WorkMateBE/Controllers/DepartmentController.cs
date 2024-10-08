@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WorkMateBE.Dtos.DepartmentDto;
 using WorkMateBE.Interfaces;
@@ -56,6 +57,7 @@ namespace WorkMateBE.Controllers
         }
 
         // POST: api/department
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult CreateDepartment([FromBody] DepartmentCreateDto departmentDto)
         {
@@ -77,6 +79,7 @@ namespace WorkMateBE.Controllers
         }
 
         // PUT: api/department/{id}
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public IActionResult UpdateDepartment(int id, [FromBody] DepartmentCreateDto departmentDto)
         {
@@ -107,6 +110,7 @@ namespace WorkMateBE.Controllers
         }
 
         // DELETE: api/department/{id}
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public IActionResult DeleteDepartment(int id)
         {

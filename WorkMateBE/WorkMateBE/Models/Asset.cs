@@ -8,7 +8,7 @@
         public string Location { get; set; }
         public DateTime CreatedAt { get; set; }
         public int Status {  get; set; }
-        public int EmployeeId { get; set; } //Assign To Employee ID
+        public int? EmployeeId { get; set; } //Assign To Employee ID
         public Employee Employee { get; set; }
 
     }

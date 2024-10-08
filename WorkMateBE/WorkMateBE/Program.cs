@@ -40,7 +40,7 @@ builder.Services.AddSwaggerGen(c =>
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,
-        Description = "Vui lòng nhập 'Bearer' [space] và token của bạn",
+        Description = "Vui lòng nhập 'Bearer' và token của bạn",
         Name = "Authorization",
         Type = SecuritySchemeType.ApiKey
     });
