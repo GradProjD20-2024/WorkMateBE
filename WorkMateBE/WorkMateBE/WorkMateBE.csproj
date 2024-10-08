@@ -19,7 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dtos\AssetDto\" />
     <Folder Include="Dtos\AttendanceDto\" />
     <Folder Include="Dtos\LeaveRequestDto\" />
     <Folder Include="Dtos\SalaryDto\" />
