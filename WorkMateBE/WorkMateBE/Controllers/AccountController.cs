@@ -18,11 +18,13 @@ namespace WorkMateBE.Controllers
     {
         private readonly IAccountRepository _accountRepository;
         private readonly IMapper _mapper;
+        private readonly IEmployeeRepository _employeeRepository;
 
-        public AccountController(IAccountRepository accountRepository, IMapper mapper)
+        public AccountController(IAccountRepository accountRepository, IMapper mapper, IEmployeeRepository employeeRepository)
         {
             _accountRepository = accountRepository;
             _mapper = mapper;
+            _employeeRepository = employeeRepository;
         }
 
         // GET: api/account
@@ -68,6 +70,15 @@ namespace WorkMateBE.Controllers
         {
             if (accountDto == null)
                 return BadRequest(ModelState);
+            if (_employeeRepository.GetEmployeeById(accountDto.EmployeeId)==null)
+            {
+                return NotFound(new ApiResponse
+                {
+                    StatusCode = 404,
+                    Message = "The employee not found",
+                    Data = null
+                });
+            }
             if (_accountRepository.CheckEmployee(accountDto.EmployeeId))
             {
                 return BadRequest(new ApiResponse
@@ -77,6 +88,7 @@ namespace WorkMateBE.Controllers
                     Data = null
                 });
             }
+            
             // Kiểm tra email đã tồn tại
             if (_accountRepository.CheckEmail(accountDto.Email))
             {
@@ -87,7 +99,7 @@ namespace WorkMateBE.Controllers
                     Data = null
                 });
             }
-
+            
             var account = _mapper.Map<Account>(accountDto);
             if (!_accountRepository.CreateAccount(account))
             {

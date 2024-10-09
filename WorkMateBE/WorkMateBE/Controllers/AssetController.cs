@@ -99,6 +99,7 @@ namespace WorkMateBE.Controllers
                 return BadRequest(ModelState);
 
             var existingAsset = _assetRepository.GetAssetById(id);
+
             if (existingAsset == null)
             {
                 return NotFound(new ApiResponse
@@ -110,6 +111,15 @@ namespace WorkMateBE.Controllers
             }
 
             var asset = _mapper.Map<Asset>(assetDto);
+            if (asset.EmployeeId.HasValue && _employeeRepository.GetEmployeeById(asset.EmployeeId.Value) == null)
+            {
+                return BadRequest(new ApiResponse
+                {
+                    StatusCode = 400,
+                    Message = "Employee not found",
+                    Data = null
+                });
+            }
             if (!_assetRepository.UpdateAsset(id, asset))
             {
                 ModelState.AddModelError("", "Something went wrong while updating");
