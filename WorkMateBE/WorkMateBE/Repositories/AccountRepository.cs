@@ -3,6 +3,7 @@ using WorkMateBE.Interfaces;
 using WorkMateBE.Models;
 using Microsoft.EntityFrameworkCore;
 using WorkMateBE.Dtos.AccountDto;
+using BCrypt.Net;
 
 namespace WorkMateBE.Repositories
 {
@@ -24,9 +25,12 @@ namespace WorkMateBE.Repositories
         // Tạo mới tài khoản
         public bool CreateAccount(Account account)
         {
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(account.Password);
+            account.Password = hashedPassword;
             _context.Add(account);
             return Save();
         }
+
 
         // Xóa tài khoản
         public bool DeleteAccount(int accountId)
@@ -58,17 +62,34 @@ namespace WorkMateBE.Repositories
 
         public bool Login(AccountLogin accountLogin)
         {
+            // Kiểm tra email có tồn tại hay không
             if (!CheckEmail(accountLogin.Email))
             {
                 return false;
             }
-            var account = _context.Accounts.Where(p => p.Email == accountLogin.Email).FirstOrDefault();
-            if(account.Password != accountLogin.Password)
+
+            // Lấy thông tin tài khoản theo email
+            var account = _context.Accounts.FirstOrDefault(p => p.Email == accountLogin.Email);
+
+            // Kiểm tra nếu không tìm thấy tài khoản
+            if (account == null)
             {
                 return false;
             }
+
+            // So sánh mật khẩu đã nhập với mật khẩu được mã hóa trong cơ sở dữ liệu
+            bool isPasswordValid = BCrypt.Net.BCrypt.Verify(accountLogin.Password, account.Password);
+
+            // Nếu mật khẩu không hợp lệ, trả về false
+            if (!isPasswordValid)
+            {
+                return false;
+            }
+
+            // Nếu đúng mật khẩu, đăng nhập thành công
             return true;
         }
+
 
         // Cập nhật tài khoản
         public bool UpdateAccount(int accountId, Account account)

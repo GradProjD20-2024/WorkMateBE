@@ -28,7 +28,7 @@ namespace WorkMateBE.Controllers
         }
 
         // GET: api/account
-        [Authorize(Roles = "Admin")]
+        
         [HttpGet]
         public IActionResult GetAllAccounts()
         {
@@ -44,6 +44,7 @@ namespace WorkMateBE.Controllers
 
 
         // GET: api/account/{id}
+        [Authorize(Roles = "Admin")]
         [HttpGet("{id}")]
         public IActionResult GetAccountById(int id)
         {
