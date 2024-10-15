@@ -7,8 +7,8 @@
         public int Bonus { get; set; }
         public int Deduction { get; set; }
         public int Total { get; set; }
-        public DateTime PaidAt { get; set; }
-        public DateTime SalaryMonth { get; set; }
+        public int Month { get; set; }
+        public int Year { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public int Status { get; set; }
         public int EmployeeId { get; set; }

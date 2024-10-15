@@ -45,13 +45,15 @@ namespace WorkMateBE.Repositories
 
         public Account GetAccountByEmail(string email)
         {
-            return _context.Accounts.FirstOrDefault(a => a.Email == email);
+            var account = _context.Accounts.FirstOrDefault(a => a.Email == email);
+            return account;
         }
 
         // Lấy tài khoản theo ID
         public Account GetAccountById(int accountId)
         {
-            return _context.Accounts.FirstOrDefault(a => a.Id == accountId);
+            var account = _context.Accounts.FirstOrDefault(a => a.Id == accountId);
+            return account;
         }
 
         // Lấy tất cả tài khoản
