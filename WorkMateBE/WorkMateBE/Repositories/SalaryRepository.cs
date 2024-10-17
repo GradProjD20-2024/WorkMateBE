@@ -15,6 +15,11 @@ namespace WorkMateBE.Repositories
         }
         public bool CreateSalarySheet(int employeeId, int month, int year)
         {
+            var salaries = _context.Salaries.Where(p => p.EmployeeId == employeeId &&  p.Month == month &&  p.Year == year);
+            if(salaries != null)
+            {
+                return false;
+            }
             var employee = _context.Employees.Where(p => p.Id == employeeId).FirstOrDefault();
             int baseSalary = employee.BaseSalary;
             int bonus = CalculateBonus(baseSalary, CountWorkingHoursReality(employeeId, month,year), CountWorkingHoursStandard(month, year));
@@ -108,7 +113,7 @@ namespace WorkMateBE.Repositories
 
         public int CalculateBonus(int baseSalary, int realHours, int standardHours)
         {
-            int salaryHours = baseSalary / standardHours;
+            int salaryHours = (baseSalary / standardHours) * 3 / 2;
             if (realHours > standardHours)
             {
                 return salaryHours * (realHours - standardHours);
@@ -120,10 +125,17 @@ namespace WorkMateBE.Repositories
         {
             var account = _context.Accounts.Where(p => p.EmployeeId == employeeId).FirstOrDefault();
             var attendances = _context.Attendances
-                .Where(p => p.AccountId == account.Id && p.CreatedAt.Month == month && p.CreatedAt.Year == year && p.Status == 2)
+                .Where(p => p.AccountId == account.Id && p.CreatedAt.Month == month && p.CreatedAt.Year == year && p.Late == 1)
                 .ToList();
             int lateCounter = attendances.Count;
             return lateCounter * 100000;
+        }
+
+        public ICollection<Salary> GetSalarySheet(int employeeId)
+        {
+            var salaries = _context.Salaries.Where(p => p.EmployeeId  == employeeId).ToList();
+            return salaries;
+
         }
 
         public bool Save()

@@ -121,7 +121,15 @@ namespace WorkMateBE.Repositories
             }
             return true;
         }
-
+        public bool ChangePassword (int accountId, string newPassword)
+        {
+            var account = GetAccountById(accountId);
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(newPassword);
+            account.Password = hashedPassword;
+            _context.Update(account);
+            return Save();
+            
+        }
         // Lưu thay đổi vào cơ sở dữ liệu
         private bool Save()
         {

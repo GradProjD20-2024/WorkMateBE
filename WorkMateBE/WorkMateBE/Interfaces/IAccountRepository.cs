@@ -14,5 +14,6 @@ namespace WorkMateBE.Interfaces
         bool CheckEmail(string email);
         bool Login(AccountLogin accountLogin);
         bool CheckEmployee(int employeeId);
+        bool ChangePassword(int accountId, string newPassword);
     }
 }

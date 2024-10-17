@@ -28,7 +28,7 @@ namespace WorkMateBE.Controllers
         }
 
         // GET: api/account
-        
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult GetAllAccounts()
         {
@@ -198,13 +198,61 @@ namespace WorkMateBE.Controllers
                 Data = GenerateJwtToken(account)
             });
         }
+        [HttpPost("change-password/{accountId}")]
+        public IActionResult ChangePassword([FromBody] AccountChangePw pass, int accountId)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var account = _accountRepository.GetAccountById(accountId);
+            if (!BCrypt.Net.BCrypt.Verify(pass.OldPassword, account.Password))
+            {
+                return BadRequest(new ApiResponse
+                {
+                    StatusCode = 400,
+                    Message = "Old password is incorrect",
+                    Data = null
+                });
+
+            }
+            if (pass.NewPassword != pass.ConfirmPassword)
+            {
+                return BadRequest(new ApiResponse
+                {
+                    StatusCode = 400,
+                    Message = "Password and Confirm Password are not same",
+                    Data = null
+                });
+            }
+            if(!_accountRepository.ChangePassword(accountId, pass.NewPassword))
+            {
+                return BadRequest(new ApiResponse
+                {
+                    StatusCode = 400,
+                    Message = "Something went wrong while change password",
+                    Data = null
+                });
+            }
+            return Ok(new ApiResponse
+            {
+                StatusCode = 200,
+                Message = "Change password success",
+                Data = null
+            });
+
+
+        }
+
         private string GenerateJwtToken(Account account)
         {
             // Tạo các claims chứa thông tin role và id
             var claims = new[]
             {
                 new Claim(ClaimTypes.NameIdentifier, account.Id.ToString()),
-                new Claim(ClaimTypes.Role, account.Role.ToString())
+                new Claim(ClaimTypes.Role, account.Role.ToString()),
+                new Claim("EmployeeId", account.EmployeeId.ToString())
     };
 
             // Tạo khóa bảo mật

@@ -2,6 +2,7 @@
 using WorkMateBE.Interfaces;
 using WorkMateBE.Models;
 using System.Net.Http.Headers;
+using WorkMateBE.Migrations;
 
 namespace WorkMateBE.Repositories
 {
@@ -25,11 +26,19 @@ namespace WorkMateBE.Repositories
             {
                 return 0;
             }
+            int late = 0;
+            DateTime now = DateTime.Now;
+            DateTime targetTime = new DateTime(now.Year, now.Month, now.Day, 8, 30, 0);
+            if(now > targetTime)
+            {
+                late = 1;
+            }
             var attendance = new Attendance
             {
                 CheckIn = DateTime.Now,
                 CheckOut = null,
                 Status = 0,
+                Late = late,
                 AccountId = accountId,
             };
             _context.Add(attendance);
@@ -95,7 +104,10 @@ namespace WorkMateBE.Repositories
         public async Task<int> CheckOut(int attendanceId, byte[] photo)
         {
             var attendance = _context.Attendances.Where(p => p.Id == attendanceId).FirstOrDefault();
-
+            if (attendance.CheckOut != null)
+            {
+                return -2;
+            }
             var checkFace = await GetResultAsync(photo);
 
             if (checkFace == -1)
@@ -124,5 +136,6 @@ namespace WorkMateBE.Repositories
             var  attendances = _context.Attendances.Where(p => p.AccountId == accountId).ToList();
             return attendances;
         }
+
     }
 }

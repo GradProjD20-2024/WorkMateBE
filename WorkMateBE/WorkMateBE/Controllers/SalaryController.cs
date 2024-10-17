@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
 using WorkMateBE.Interfaces;
+using WorkMateBE.Responses;
 
 namespace WorkMateBE.Controllers
 {
@@ -17,11 +18,35 @@ namespace WorkMateBE.Controllers
         [HttpPost]
         public IActionResult CreateSalary([FromQuery] int employeeId, [FromQuery] int month, [FromQuery] int year)
         {
-            if(!_salaryRepository.CreateSalarySheet(employeeId, month, year))
+            DateTime now = DateTime.Now;
+            DateTime input = new DateTime(year, month, 1).AddMonths(1).AddDays(-1);
+            if(now <= input)
+            {
+                return Ok(new ApiResponse
+                {
+                    StatusCode = 200,
+                    Message = "Time invalid",
+                    Data = null
+                });
+            }
+            if (!_salaryRepository.CreateSalarySheet(employeeId, month, year))
             {
                 return BadRequest("Something went wrong");
             }
             return Ok("Create Salary success");
         }
+
+        [HttpGet("{employeeId}")]
+        public IActionResult GetSalary (int employeeId)
+        {
+            var salaries = _salaryRepository.GetSalarySheet(employeeId);
+            return Ok(new ApiResponse
+            {
+                StatusCode = 200,
+                Message = "Get Salary Sheet success",
+                Data = salaries
+            });
+        }
+
     }
 }

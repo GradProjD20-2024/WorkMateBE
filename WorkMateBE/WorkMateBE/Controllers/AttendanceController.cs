@@ -119,6 +119,15 @@ namespace WorkMateBE.Controllers
 
             // Gọi hàm GetResultAsync để xử lý tệp
             var result = await _attendanceRepository.CheckOut(attendanceId, fileBytes);
+            if (result == -2)
+            {
+                return BadRequest(new ApiResponse
+                {
+                    StatusCode = 400,
+                    Message = "You already check-out",
+                    Data = null
+                });
+            }
             if (result == -1)
             {
                 return BadRequest(new ApiResponse
@@ -132,7 +141,7 @@ namespace WorkMateBE.Controllers
             {
                 return Ok(new ApiResponse
                 {
-                    StatusCode = 200,
+                    StatusCode = 400,
                     Message = "Face ID is invalid",
                     Data = null
                 });
