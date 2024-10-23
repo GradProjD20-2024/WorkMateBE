@@ -19,8 +19,8 @@ namespace WorkMateBE.Controllers
         public IActionResult CreateSalary([FromQuery] int employeeId, [FromQuery] int month, [FromQuery] int year)
         {
             DateTime now = DateTime.Now;
-            DateTime input = new DateTime(year, month, 1).AddMonths(1).AddDays(-1);
-            if(now <= input)
+            DateTime input = new DateTime(year, month, 1).AddMonths(1);
+            if(now < input)
             {
                 return Ok(new ApiResponse
                 {
