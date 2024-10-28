@@ -356,4 +356,3 @@ D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\Microsoft.Identity
 D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\BCrypt.Net-Next.dll
-D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\Properties\launch.json
