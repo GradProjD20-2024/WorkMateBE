@@ -8,6 +8,7 @@
         public string IdentificationId { get; set; }
         public string Position { get; set; }
         public string Address { get; set; }
+        public int BaseSalary { get; set; }
         public int Status { get; set; }
         public int DepartmentId { get; set; }
     }

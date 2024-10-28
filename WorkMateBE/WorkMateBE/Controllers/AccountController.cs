@@ -28,7 +28,7 @@ namespace WorkMateBE.Controllers
         }
 
         // GET: api/account
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "1,2")]
         [HttpGet]
         public IActionResult GetAllAccounts()
         {
@@ -44,28 +44,39 @@ namespace WorkMateBE.Controllers
 
 
         // GET: api/account/{id}
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "1,2")]
         [HttpGet("{id}")]
         public IActionResult GetAccountById(int id)
         {
-            var account = _accountRepository.GetAccountById(id);
-            if (account == null)
-                return NotFound(new ApiResponse
-                {
-                    StatusCode = 404,
-                    Message = "Account ID not exists",
-                    Data = null
-                });
-            var accountDto = _mapper.Map<AccountGetDto>(account);
-            return Ok(new ApiResponse
+            // Lấy thông tin user hiện tại từ token
+            var currentUserId = int.Parse(User.Identity.Name);
+
+            // Kiểm tra nếu user có quyền truy cập (role 1, 2 hoặc là chủ sở hữu)
+            if (User.IsInRole("1") || User.IsInRole("2") || currentUserId == id)
             {
-                StatusCode = 200,
-                Message = "Get Account success",
-                Data = accountDto
-            });
+                var account = _accountRepository.GetAccountById(id);
+                if (account == null)
+                    return NotFound(new ApiResponse
+                    {
+                        StatusCode = 404,
+                        Message = "Account ID not exists",
+                        Data = null
+                    });
+                var accountDto = _mapper.Map<AccountGetDto>(account);
+                return Ok(new ApiResponse
+                {
+                    StatusCode = 200,
+                    Message = "Get Account success",
+                    Data = accountDto
+                });
+            }
+
+            // Nếu không có quyền truy cập
+            return Forbid();
         }
 
         // POST: api/account
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult CreateAccount([FromBody] AccountCreateDto accountDto)
         {
@@ -105,7 +116,7 @@ namespace WorkMateBE.Controllers
             if (!_accountRepository.CreateAccount(account))
             {
                 ModelState.AddModelError("", "Something went wrong while saving");
-                return StatusCode(500, ModelState);
+                return StatusCode(400, ModelState);
             }
 
             return Ok(new ApiResponse
@@ -117,6 +128,7 @@ namespace WorkMateBE.Controllers
         }
 
         // PUT: api/account/{id}
+        [Authorize(Roles = "1")]
         [HttpPut("{id}")]
         public IActionResult UpdateAccount(int id, [FromBody] AccountCreateDto accountDto)
         {
@@ -148,6 +160,7 @@ namespace WorkMateBE.Controllers
         }
 
         // DELETE: api/account/{id}
+        [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult DeleteAccount(int id)
         {
@@ -201,46 +214,51 @@ namespace WorkMateBE.Controllers
         [HttpPost("change-password/{accountId}")]
         public IActionResult ChangePassword([FromBody] AccountChangePw pass, int accountId)
         {
-            if (!ModelState.IsValid)
+            var currentUserId = int.Parse(User.Identity.Name);
+            if (currentUserId == accountId)
             {
-                return BadRequest(ModelState);
-            }
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
 
-            var account = _accountRepository.GetAccountById(accountId);
-            if (!BCrypt.Net.BCrypt.Verify(pass.OldPassword, account.Password))
-            {
-                return BadRequest(new ApiResponse
+                var account = _accountRepository.GetAccountById(accountId);
+                if (!BCrypt.Net.BCrypt.Verify(pass.OldPassword, account.Password))
                 {
-                    StatusCode = 400,
-                    Message = "Old password is incorrect",
-                    Data = null
-                });
+                    return BadRequest(new ApiResponse
+                    {
+                        StatusCode = 400,
+                        Message = "Old password is incorrect",
+                        Data = null
+                    });
 
-            }
-            if (pass.NewPassword != pass.ConfirmPassword)
-            {
-                return BadRequest(new ApiResponse
+                }
+                if (pass.NewPassword != pass.ConfirmPassword)
                 {
-                    StatusCode = 400,
-                    Message = "Password and Confirm Password are not same",
+                    return BadRequest(new ApiResponse
+                    {
+                        StatusCode = 400,
+                        Message = "Password and Confirm Password are not same",
+                        Data = null
+                    });
+                }
+                if (!_accountRepository.ChangePassword(accountId, pass.NewPassword))
+                {
+                    return BadRequest(new ApiResponse
+                    {
+                        StatusCode = 400,
+                        Message = "Something went wrong while change password",
+                        Data = null
+                    });
+                }
+                return Ok(new ApiResponse
+                {
+                    StatusCode = 200,
+                    Message = "Change password success",
                     Data = null
                 });
             }
-            if(!_accountRepository.ChangePassword(accountId, pass.NewPassword))
-            {
-                return BadRequest(new ApiResponse
-                {
-                    StatusCode = 400,
-                    Message = "Something went wrong while change password",
-                    Data = null
-                });
-            }
-            return Ok(new ApiResponse
-            {
-                StatusCode = 200,
-                Message = "Change password success",
-                Data = null
-            });
+            return Forbid();
 
 
         }
@@ -251,7 +269,7 @@ namespace WorkMateBE.Controllers
             var claims = new[]
             {
                 new Claim(ClaimTypes.NameIdentifier, account.Id.ToString()),
-                new Claim(ClaimTypes.Role, account.Role.ToString()),
+                new Claim(ClaimTypes.Role, account.RoleId.ToString()),
                 new Claim("EmployeeId", account.EmployeeId.ToString())
     };
 

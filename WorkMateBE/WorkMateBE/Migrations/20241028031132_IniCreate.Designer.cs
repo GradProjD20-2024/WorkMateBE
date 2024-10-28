@@ -11,8 +11,8 @@ using WorkMateBE.Data;
 namespace WorkMateBE.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20241007085238_AddEnum")]
-    partial class AddEnum
+    [Migration("20241028031132_IniCreate")]
+    partial class IniCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -49,9 +49,8 @@ namespace WorkMateBE.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -59,6 +58,8 @@ namespace WorkMateBE.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("EmployeeId");
+
+                    b.HasIndex("RoleId");
 
                     b.ToTable("Accounts");
                 });
@@ -76,7 +77,7 @@ namespace WorkMateBE.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("EmployeeId")
+                    b.Property<int?>("EmployeeId")
                         .HasColumnType("int");
 
                     b.Property<string>("Location")
@@ -103,28 +104,27 @@ namespace WorkMateBE.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<int>("AccountId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CheckIn")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<DateTime>("CheckOut")
+                    b.Property<DateTime?>("CheckOut")
                         .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int>("EmployeeId")
+                    b.Property<int>("Late")
                         .HasColumnType("int");
-
-                    b.Property<string>("PhotoUrl")
-                        .IsRequired()
-                        .HasColumnType("longtext");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("EmployeeId");
+                    b.HasIndex("AccountId");
 
                     b.ToTable("Attendances");
                 });
@@ -163,6 +163,9 @@ namespace WorkMateBE.Migrations
                     b.Property<string>("Address")
                         .IsRequired()
                         .HasColumnType("longtext");
+
+                    b.Property<int>("BaseSalary")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("Birthday")
                         .HasColumnType("datetime(6)");
@@ -228,6 +231,28 @@ namespace WorkMateBE.Migrations
                     b.ToTable("LeaveRequests");
                 });
 
+            modelBuilder.Entity("WorkMateBE.Models.Role", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Roles");
+                });
+
             modelBuilder.Entity("WorkMateBE.Models.Salary", b =>
                 {
                     b.Property<int>("Id")
@@ -249,16 +274,16 @@ namespace WorkMateBE.Migrations
                     b.Property<int>("EmployeeId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("PaidAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<DateTime>("SalaryMonth")
-                        .HasColumnType("datetime(6)");
+                    b.Property<int>("Month")
+                        .HasColumnType("int");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.Property<int>("Total")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Year")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -276,29 +301,35 @@ namespace WorkMateBE.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("WorkMateBE.Models.Role", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Employee");
+
+                    b.Navigation("Role");
                 });
 
             modelBuilder.Entity("WorkMateBE.Models.Asset", b =>
                 {
                     b.HasOne("WorkMateBE.Models.Employee", "Employee")
                         .WithMany()
-                        .HasForeignKey("EmployeeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("EmployeeId");
 
                     b.Navigation("Employee");
                 });
 
             modelBuilder.Entity("WorkMateBE.Models.Attendance", b =>
                 {
-                    b.HasOne("WorkMateBE.Models.Employee", "Employee")
+                    b.HasOne("WorkMateBE.Models.Account", "Account")
                         .WithMany()
-                        .HasForeignKey("EmployeeId")
+                        .HasForeignKey("AccountId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Employee");
+                    b.Navigation("Account");
                 });
 
             modelBuilder.Entity("WorkMateBE.Models.Employee", b =>

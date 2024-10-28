@@ -13,9 +13,6 @@ namespace WorkMateBE.Dtos.AccountDto
         [MinLength(6, ErrorMessage = "Password must be at least 6 characters")]
         public string Password { get; set; }
 
-        [Required(ErrorMessage = "Role is required")]
-        public UserRole Role { get; set; }
-
         //[Url(ErrorMessage = "Invalid URL format for AvatarUrl")]
         public string? AvatarUrl { get; set; }
 
@@ -28,5 +25,7 @@ namespace WorkMateBE.Dtos.AccountDto
 
         [Required(ErrorMessage = "EmployeeId is required")]
         public int EmployeeId { get; set; }
+        [Required(ErrorMessage = "Role is required")]
+        public int RoleId { get; set; }
     }
 }

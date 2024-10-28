@@ -13,12 +13,13 @@ namespace WorkMateBE.Data
         public DbSet<Employee> Employees { get; set; }
         public DbSet<LeaveRequest> LeaveRequests { get; set; }
         public DbSet<Salary> Salaries { get; set; }
+        public DbSet<Role> Roles { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        /*protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Account>()
         .Property(a => a.Role)
         .HasConversion<string>();
-        }
+        }*/
     }
 }

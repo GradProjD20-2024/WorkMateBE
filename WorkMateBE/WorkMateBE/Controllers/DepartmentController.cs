@@ -57,7 +57,7 @@ namespace WorkMateBE.Controllers
         }
 
         // POST: api/department
-        [Authorize(Roles = "Admin")]
+        /*[Authorize(Roles = "Admin")]*/
         [HttpPost]
         public IActionResult CreateDepartment([FromBody] DepartmentCreateDto departmentDto)
         {
