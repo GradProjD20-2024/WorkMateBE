@@ -49,7 +49,7 @@ namespace WorkMateBE.Controllers
         public IActionResult GetAccountById(int id)
         {
             // Lấy thông tin user hiện tại từ token
-            var currentUserId = int.Parse(User.Identity.Name);
+            var currentUserId = int.Parse(User.Identity?.Name ?? "0");
 
             // Kiểm tra nếu user có quyền truy cập (role 1, 2 hoặc là chủ sở hữu)
             if (User.IsInRole("1") || User.IsInRole("2") || currentUserId == id)
@@ -76,7 +76,7 @@ namespace WorkMateBE.Controllers
         }
 
         // POST: api/account
-        [Authorize(Roles = "1")]
+        /*[Authorize(Roles = "1")]*/
         [HttpPost]
         public IActionResult CreateAccount([FromBody] AccountCreateDto accountDto)
         {
@@ -214,7 +214,7 @@ namespace WorkMateBE.Controllers
         [HttpPost("change-password/{accountId}")]
         public IActionResult ChangePassword([FromBody] AccountChangePw pass, int accountId)
         {
-            var currentUserId = int.Parse(User.Identity.Name);
+            var currentUserId = int.Parse(User.Identity?.Name ?? "0");
             if (currentUserId == accountId)
             {
                 if (!ModelState.IsValid)
