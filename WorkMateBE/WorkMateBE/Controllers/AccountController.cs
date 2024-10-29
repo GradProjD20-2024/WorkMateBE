@@ -44,7 +44,7 @@ namespace WorkMateBE.Controllers
 
 
         // GET: api/account/{id}
-        [Authorize(Roles = "1,2")]
+        /*[Authorize(Roles = "1,2")]*/
         [HttpGet("{id}")]
         public IActionResult GetAccountById(int id)
         {

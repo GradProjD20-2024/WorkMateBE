@@ -80,7 +80,8 @@ builder.Services.AddCors(options =>
         {
             policy.WithOrigins("http://localhost:3000")
                   .AllowAnyHeader()
-                  .AllowAnyMethod();
+                  .AllowAnyMethod()
+                  .AllowCredentials(); // Cho phép gửi cookie nếu cần
         });
 });
 var app = builder.Build();
@@ -95,7 +96,7 @@ if (app.Environment.IsDevelopment())
     c.RoutePrefix = string.Empty; // Sử dụng nếu muốn Swagger UI ở trang chính
 });
 }
-
+app.UseCors("AllowLocalhost3000");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
