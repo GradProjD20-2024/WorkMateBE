@@ -269,7 +269,9 @@ namespace WorkMateBE.Controllers
             var claims = new[]
             {
                 new Claim(ClaimTypes.NameIdentifier, account.Id.ToString()),
+                new Claim("Id", account.Id.ToString()),
                 new Claim(ClaimTypes.Role, account.RoleId.ToString()),
+                new Claim("Role", account.RoleId.ToString()),
                 new Claim("EmployeeId", account.EmployeeId.ToString())
     };
 

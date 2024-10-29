@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\workmate\\workmatebe\\workmatebe\\workmatebe\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\workmate\\workmatebe\\workmatebe\\workmatebe\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\workmate\\workmatebe\\workmatebe\\workmatebe\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,7 +38,32 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "WorkMateBE\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "WorkMateBE\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAgBAAAAAAAAAAAAABEBAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T04:13:15.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Department.cs",
+              "DocumentMoniker": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "WorkMateBE\\Models\\Department.cs",
+              "ToolTip": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Models\\Department.cs",
+              "RelativeToolTip": "WorkMateBE\\Models\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T04:13:08.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "WorkMateBE.http",
               "DocumentMoniker": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\WorkMateBE.http",
               "RelativeDocumentMoniker": "WorkMateBE\\WorkMateBE.http",
@@ -42,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "WorkMateBE.csproj",
               "DocumentMoniker": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\WorkMateBE.csproj",
               "RelativeDocumentMoniker": "WorkMateBE\\WorkMateBE.csproj",
@@ -54,16 +87,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "WorkMateBE\\Properties\\launchSettings.json",
               "ToolTip": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Properties\\launchSettings.json",
               "RelativeToolTip": "WorkMateBE\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-29T03:10:58.556Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T03:10:58.556Z"
             }
           ]
         }
