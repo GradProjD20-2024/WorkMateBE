@@ -79,7 +79,7 @@ namespace WorkMateBE.Controllers
         }
 
         // PUT: api/department/{id}
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "1")]
         [HttpPut("{id}")]
         public IActionResult UpdateDepartment(int id, [FromBody] DepartmentCreateDto departmentDto)
         {
@@ -110,7 +110,7 @@ namespace WorkMateBE.Controllers
         }
 
         // DELETE: api/department/{id}
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult DeleteDepartment(int id)
         {
