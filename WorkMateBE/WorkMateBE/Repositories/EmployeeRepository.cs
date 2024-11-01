@@ -35,7 +35,7 @@ namespace WorkMateBE.Repositories
 
         public Employee GetEmployeeById(int employeeId)
         {
-            var employees = _context.Employees.Where(p => p.Id == employeeId).FirstOrDefault();
+            var employees = _context.Employees.Find(employeeId);
             return employees;
         }
 

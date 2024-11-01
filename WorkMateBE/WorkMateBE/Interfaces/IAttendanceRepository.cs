@@ -9,5 +9,7 @@ namespace WorkMateBE.Interfaces
         Task<int> GetResultAsync(byte[] photo);
         Attendance GetAttendanceById(int attendanceId);
         ICollection<Attendance> GetAttendancesByAccountId(int accountId);
+        int CheckDay(DateTime dateTime, int accountId);
+
     }
 }

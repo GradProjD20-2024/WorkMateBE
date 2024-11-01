@@ -52,7 +52,7 @@ namespace WorkMateBE.Repositories
         // Lấy tài khoản theo ID
         public Account GetAccountById(int accountId)
         {
-            var account = _context.Accounts.FirstOrDefault(a => a.Id == accountId);
+            var account = _context.Accounts.Find(accountId);
             return account;
         }
 

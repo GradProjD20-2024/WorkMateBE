@@ -38,7 +38,7 @@ namespace WorkMateBE.Repositories
 
         public Asset GetAssetById(int assetId)
         {
-            return _context.Assets.FirstOrDefault(a => a.Id == assetId);
+            return _context.Assets.Find(assetId);
         }
 
         public bool UpdateAsset(int assetId, Asset updatedAsset)

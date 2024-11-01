@@ -33,7 +33,7 @@ namespace WorkMateBE.Repositories
 
         public Role GetRoleById(int id)
         {
-            var role = _context.Roles.Where(p => p.Id == id).FirstOrDefault();
+            var role = _context.Roles.Find(id);
             return role;
         }
         public bool Save()

@@ -61,7 +61,7 @@ namespace WorkMateBE.Repositories
         {
             var account = _context.Accounts.Where(p => p.EmployeeId == employeeId).FirstOrDefault();
             var attendances = _context.Attendances
-                .Where(p => p.AccountId == account.Id && p.CreatedAt.Month == month && p.CreatedAt.Year == year)
+                .Where(p => p.AccountId == account.Id && p.CreatedAt.Month == month && p.CreatedAt.Year == year && p.Status == 1)
                 .ToList();
 
             int hoursCounter = 0;
@@ -125,7 +125,7 @@ namespace WorkMateBE.Repositories
         {
             var account = _context.Accounts.Where(p => p.EmployeeId == employeeId).FirstOrDefault();
             var attendances = _context.Attendances
-                .Where(p => p.AccountId == account.Id && p.CreatedAt.Month == month && p.CreatedAt.Year == year && p.Late == 1)
+                .Where(p => p.AccountId == account.Id && p.CreatedAt.Month == month && p.CreatedAt.Year == year && p.Late == 1 &&  p.Status == 1)
                 .ToList();
             int lateCounter = attendances.Count;
             return lateCounter * 100000;

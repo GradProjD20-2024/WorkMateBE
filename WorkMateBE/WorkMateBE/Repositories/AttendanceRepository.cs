@@ -125,6 +125,7 @@ namespace WorkMateBE.Repositories
             _context.SaveChanges();
             return 1;
         }
+
         public Attendance GetAttendanceById(int attendanceId)
         {
             var attendance = _context.Attendances.Where(p => p.Id == attendanceId).FirstOrDefault();
@@ -137,5 +138,16 @@ namespace WorkMateBE.Repositories
             return attendances;
         }
 
+        public int CheckDay(DateTime dateTime, int accountId)
+        {
+            var attendance = _context.Attendances.Where(p=> p.CheckIn.Date == dateTime.Date && p.AccountId == accountId && p.Status==0).FirstOrDefault();
+            if(attendance == null)
+            {
+                return 0;
+            }
+            return 1;
+        }
+
+        
     }
 }

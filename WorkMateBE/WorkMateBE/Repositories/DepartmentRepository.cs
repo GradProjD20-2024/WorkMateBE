@@ -35,7 +35,7 @@ namespace WorkMateBE.Repositories
 
         public Department GetDepartmentById(int departmentId)
         {
-            var department = _context.Departments.Where(p => p.Id == departmentId).FirstOrDefault();
+            var department = _context.Departments.Find(departmentId);
             return department;
         }
 

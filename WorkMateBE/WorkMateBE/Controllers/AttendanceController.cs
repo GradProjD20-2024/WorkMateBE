@@ -52,7 +52,16 @@ namespace WorkMateBE.Controllers
                 await file.CopyToAsync(memoryStream);
                 fileBytes = memoryStream.ToArray();
             }
-
+            var now = DateTime.Now;
+            if(_attendanceRepository.CheckDay(now, accountId) == 1)
+            {
+                return BadRequest(new ApiResponse
+                {
+                    StatusCode = 400,
+                    Message = "Have you checked in today?",
+                    Data = null
+                });
+            }
             // Gọi hàm GetResultAsync để xử lý tệp
             var result = await _attendanceRepository.CheckIn(accountId, fileBytes);
             if(result == -1)
