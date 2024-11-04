@@ -9,5 +9,6 @@ namespace WorkMateBE.Interfaces
         bool DeleteEmployee(int employeeId);
         ICollection<Employee> GetAll();
         Employee GetEmployeeById(int employeeId);
+        List<Employee> GetEmployeesByDepartment(int departmentId);
     }
 }

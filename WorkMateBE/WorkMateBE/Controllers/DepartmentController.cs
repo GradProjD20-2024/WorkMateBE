@@ -108,7 +108,7 @@ namespace WorkMateBE.Controllers
                 Data = null
             });
         }
-
+        
         // DELETE: api/department/{id}
         [Authorize(Roles = "1")]
         [HttpDelete("{id}")]

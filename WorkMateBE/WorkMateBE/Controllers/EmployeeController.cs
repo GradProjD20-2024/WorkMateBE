@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WorkMateBE.Dtos.EmployeeDto;
 using WorkMateBE.Interfaces;
@@ -119,7 +120,27 @@ namespace WorkMateBE.Controllers
                 Data = null
             });
         }
-
+        [Authorize(Roles = "1")]
+        [HttpGet("department/{departmentId}")]
+        public IActionResult GetEmployeesByDeparment(int departmentId)
+        {
+            if (_departmentRepository.GetDepartmentById(departmentId) == null)
+            {
+                return BadRequest(new ApiResponse
+                {
+                    StatusCode = 400,
+                    Message = "Department Not Exist",
+                    Data = null
+                });
+            }
+            var employees = _employeeRepository.GetEmployeesByDepartment(departmentId);
+            return Ok(new ApiResponse
+            {
+                StatusCode = 200,
+                Message = "Get Employees success",
+                Data = employees
+            });
+        }
         // DELETE: api/employee/{id}
         [HttpDelete("{id}")]
         public IActionResult DeleteEmployee(int id)

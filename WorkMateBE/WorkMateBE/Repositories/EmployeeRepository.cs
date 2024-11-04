@@ -54,5 +54,10 @@ namespace WorkMateBE.Repositories
             var saved = _context.SaveChanges();
             return saved > 0 ? true : false;
         }
+        public List<Employee> GetEmployeesByDepartment(int departmentId)
+        {
+            var employees = _context.Employees.Where(p => p.DepartmentId == departmentId).ToList();
+            return employees;
+        }
     }
 }
