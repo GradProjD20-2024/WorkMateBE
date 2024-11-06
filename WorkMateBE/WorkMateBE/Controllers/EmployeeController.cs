@@ -101,12 +101,21 @@ namespace WorkMateBE.Controllers
             if (existingEmployee == null)
                 return NotFound(new ApiResponse
                 {
-                    StatusCode = 400,
+                    StatusCode = 404,
                     Message = "Employee ID not found",
                     Data = null
                 });
 
             var employee = _mapper.Map<Employee>(employeeDto);
+            if (_departmentRepository.GetDepartmentById(employee.DepartmentId) == null)
+            {
+                return NotFound(new ApiResponse
+                {
+                    StatusCode = 404,
+                    Message = "Department ID not found",
+                    Data = null
+                });
+            }
             if (!_employeeRepository.UpdateEmployee(id, employee))
             {
                 ModelState.AddModelError("", "Something went wrong while updating");
