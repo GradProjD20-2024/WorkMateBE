@@ -15,15 +15,13 @@ namespace WorkMateBE.Repositories
         }
         public bool CreateSalarySheet(int employeeId, int month, int year)
         {
-            var salaries = _context.Salaries.Where(p => p.EmployeeId == employeeId &&  p.Month == month &&  p.Year == year);
-            if(salaries != null)
-            {
-                return false;
-            }
             var employee = _context.Employees.Where(p => p.Id == employeeId).FirstOrDefault();
             int baseSalary = employee.BaseSalary;
+            Console.WriteLine(1);
             int bonus = CalculateBonus(baseSalary, CountWorkingHoursReality(employeeId, month,year), CountWorkingHoursStandard(month, year));
+            Console.WriteLine(1);
             int deduction = CalculateDeduction(employeeId, month, year);
+            Console.WriteLine(1);
             var Salary = new Salary
             {
                 BaseSalary = baseSalary,
@@ -35,6 +33,7 @@ namespace WorkMateBE.Repositories
                 EmployeeId = employeeId,
                 Status = 0,
             };
+            Console.WriteLine(1);
             _context.Add(Salary);
 
             return Save();
@@ -138,6 +137,10 @@ namespace WorkMateBE.Repositories
 
         }
 
+        public Salary GetSalary(int employeeId, int month, int year)
+        {
+            return _context.Salaries.Where(p => p.EmployeeId == employeeId && p.Month == month && p.Year == year).FirstOrDefault();
+        }
         public bool Save()
         {
             var saved = _context.SaveChanges();

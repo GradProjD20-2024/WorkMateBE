@@ -18,22 +18,41 @@ namespace WorkMateBE.Controllers
         [HttpPost]
         public IActionResult CreateSalary([FromQuery] int employeeId, [FromQuery] int month, [FromQuery] int year)
         {
+            if(_salaryRepository.GetSalary(employeeId, month, year) != null)
+            {
+                return BadRequest(new ApiResponse
+                {
+                    StatusCode = 400,
+                    Message = "This payroll has been created",
+                    Data = null
+                });
+            }
             DateTime now = DateTime.Now;
             DateTime input = new DateTime(year, month, 1).AddMonths(1);
             if(now < input)
             {
-                return Ok(new ApiResponse
+                return BadRequest(new ApiResponse
                 {
-                    StatusCode = 200,
+                    StatusCode = 400,
                     Message = "Time invalid",
                     Data = null
                 });
             }
             if (!_salaryRepository.CreateSalarySheet(employeeId, month, year))
             {
-                return BadRequest("Something went wrong");
+                return BadRequest(new ApiResponse
+                {
+                    StatusCode = 200,
+                    Message = "Something went wrong",
+                    Data = null
+                });
             }
-            return Ok("Create Salary success");
+            return Ok(new ApiResponse
+            {
+                StatusCode = 200,
+                Message = "Create Salary Sheet success",
+                Data = null
+            }); 
         }
 
         [HttpGet("{employeeId}")]

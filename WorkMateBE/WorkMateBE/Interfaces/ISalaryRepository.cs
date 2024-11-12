@@ -6,5 +6,6 @@ namespace WorkMateBE.Interfaces
     {
         bool CreateSalarySheet(int employeeId, int month, int year);
         ICollection<Salary> GetSalarySheet(int employeeId);
+        Salary GetSalary(int employeeId, int month, int year);
     }
 }
