@@ -46,7 +46,6 @@ namespace WorkMateBE.Repositories
             var existingAsset = _context.Assets.Find(assetId);
             if (existingAsset != null)
             {
-                // Cập nhật các thuộc tính của Asset
                 existingAsset.Name = updatedAsset.Name;
                 existingAsset.Description = updatedAsset.Description;
                 existingAsset.Location = updatedAsset.Location;
@@ -58,7 +57,7 @@ namespace WorkMateBE.Repositories
             }
             return false;
         }
-
+        
         public bool Save()
         {
             return _context.SaveChanges() > 0;
