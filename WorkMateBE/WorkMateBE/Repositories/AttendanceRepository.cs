@@ -2,6 +2,7 @@
 using WorkMateBE.Interfaces;
 using WorkMateBE.Models;
 using System.Net.Http.Headers;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
 namespace WorkMateBE.Repositories
@@ -118,7 +119,12 @@ namespace WorkMateBE.Repositories
             {
                 return 0;
             }
-            Console.WriteLine(checkFace.ToString());
+            var now = DateTime.Now;
+            DateTime targetTime = new DateTime(now.Year, now.Month, now.Day, 18, 0, 0);
+            if (now < targetTime)
+            {
+                attendance.Late = 1;
+            }
             attendance.CheckOut = DateTime.Now;
             attendance.Status = 1;
             _context.Update(attendance);

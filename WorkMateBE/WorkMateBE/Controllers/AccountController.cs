@@ -262,6 +262,42 @@ namespace WorkMateBE.Controllers
 
 
         }
+        [Authorize(Roles = "1")]
+        [HttpPost("reset-password")]
+        public IActionResult ResetPassword([FromBody] int accountId)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (_accountRepository.GetAccountById(accountId) == null)
+            {
+                return NotFound(new ApiResponse
+                {
+                    StatusCode = 404,
+                    Message = "Account ID not found",
+                    Data = null
+                });
+            }
+            var newPassword = _accountRepository.ResetPassword(accountId);
+            if (newPassword == null)
+            {
+                return BadRequest(new ApiResponse
+                {
+                    StatusCode = 400,
+                    Message = "Something went wrong",
+                    Data = null
+                });
+            }
+            return Ok(new ApiResponse
+            {
+                StatusCode = 200,
+                Message = "Reset password success",
+                Data = newPassword
+            });
+
+        }
 
         private string GenerateJwtToken(Account account)
         {
