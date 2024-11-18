@@ -118,7 +118,7 @@
   {
     "ContainingType": "WorkMateBE.Controllers.AccountController",
     "Method": "ResetPassword",
-    "RelativePath": "api/Account/reset-password",
+    "RelativePath": "api/Account/reset-password/{accountId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

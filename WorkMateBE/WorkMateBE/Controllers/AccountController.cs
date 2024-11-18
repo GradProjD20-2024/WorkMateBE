@@ -263,8 +263,8 @@ namespace WorkMateBE.Controllers
 
         }
         [Authorize(Roles = "1")]
-        [HttpPost("reset-password")]
-        public IActionResult ResetPassword([FromBody] int accountId)
+        [HttpPost("reset-password/{accountId}")]
+        public IActionResult ResetPassword(int accountId)
         {
             if (!ModelState.IsValid)
             {
