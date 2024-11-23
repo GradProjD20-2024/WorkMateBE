@@ -15,5 +15,6 @@ namespace WorkMateBE.Interfaces
         bool Login(AccountLogin accountLogin);
         bool CheckEmployee(int employeeId);
         bool ChangePassword(int accountId, string newPassword);
+        string ResetPassword(int accountId);
     }
 }

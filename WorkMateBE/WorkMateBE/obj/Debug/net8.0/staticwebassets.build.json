@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "fwnUTPRLZWpLM7Ou+iooxhZvw/SYeTNNhQOstA8BGT8=",
+  "Hash": "VvPRxKaR9yK/JAVzUKIYSQ9uBGDxeifoNbVroGcQaLE=",
   "Source": "WorkMateBE",
   "BasePath": "_content/WorkMateBE",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

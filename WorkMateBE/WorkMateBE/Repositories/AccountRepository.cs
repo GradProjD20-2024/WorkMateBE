@@ -130,11 +130,38 @@ namespace WorkMateBE.Repositories
             return Save();
             
         }
+        public string ResetPassword(int accountId)
+        {
+            var account = GetAccountById(accountId);
+            string newPassword = RandomPassword();
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(RandomPassword());
+            account.Password = hashedPassword;
+            _context.Update(account);
+            if (!Save())
+            {
+                return null;
+            }
+            return newPassword;
+        }
+        private string RandomPassword()
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            Random random = new Random();
+            char[] stringChars = new char[6];
+
+            for (int i = 0; i < 6; i++)
+            {
+                stringChars[i] = chars[random.Next(chars.Length)];
+            }
+
+            return new string(stringChars);
+        }
         // Lưu thay đổi vào cơ sở dữ liệu
         private bool Save()
         {
             var saved = _context.SaveChanges();
             return saved > 0;
         }
+        
     }
 }

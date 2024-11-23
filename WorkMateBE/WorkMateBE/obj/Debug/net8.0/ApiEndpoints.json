@@ -116,6 +116,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WorkMateBE.Controllers.AccountController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Account/reset-password/{accountId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WorkMateBE.Controllers.AssetController",
     "Method": "GetAllAssets",
     "RelativePath": "api/Asset",
