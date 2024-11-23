@@ -4,6 +4,7 @@ using WorkMateBE.Interfaces;
 using WorkMateBE.Models;
 using WorkMateBE.Responses;
 using WorkMateBE.Dtos.AssetDto;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WorkMateBE.Controllers
 {
@@ -23,6 +24,7 @@ namespace WorkMateBE.Controllers
         }
 
         // GET: api/asset
+        [Authorize(Roles = "1,2")]
         [HttpGet]
         public IActionResult GetAllAssets()
         {
@@ -37,6 +39,7 @@ namespace WorkMateBE.Controllers
         }
 
         // GET: api/asset/{id}
+        [Authorize(Roles = "1,2")]
         [HttpGet("{id}")]
         public IActionResult GetAssetById(int id)
         {
@@ -61,6 +64,7 @@ namespace WorkMateBE.Controllers
         }
 
         // POST: api/asset
+        [Authorize(Roles = "1,2")]
         [HttpPost]
         public IActionResult CreateAsset([FromBody] AssetCreateDto assetDto)
         {
@@ -92,6 +96,7 @@ namespace WorkMateBE.Controllers
         }
 
         // PUT: api/asset/{id}
+        [Authorize(Roles = "1,2")]
         [HttpPut("{id}")]
         public IActionResult UpdateAsset(int id, [FromBody] AssetCreateDto assetDto)
         {
@@ -135,6 +140,7 @@ namespace WorkMateBE.Controllers
         }
 
         // DELETE: api/asset/{id}
+        [Authorize(Roles = "1,2")]
         [HttpDelete("{id}")]
         public IActionResult DeleteAsset(int id)
         {

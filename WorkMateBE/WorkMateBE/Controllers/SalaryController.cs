@@ -10,14 +10,25 @@ namespace WorkMateBE.Controllers
     public class SalaryController : Controller
     {
         private readonly ISalaryRepository _salaryRepository;
+        private readonly IEmployeeRepository _employeeRepository;
 
-        public SalaryController(ISalaryRepository salaryRepository)
+        public SalaryController(ISalaryRepository salaryRepository, IEmployeeRepository employeeRepository)
         {
             _salaryRepository = salaryRepository;
+            _employeeRepository = employeeRepository;
         }
         [HttpPost]
         public IActionResult CreateSalary([FromQuery] int employeeId, [FromQuery] int month, [FromQuery] int year)
         {
+            if(_employeeRepository.GetEmployeeById(employeeId) == null)
+            {
+                return NotFound(new ApiResponse
+                {
+                    StatusCode = 404,
+                    Message = "Employee ID not found",
+                    Data = null
+                });
+            }
             if(_salaryRepository.GetSalary(employeeId, month, year) != null)
             {
                 return BadRequest(new ApiResponse
