@@ -12,7 +12,7 @@ namespace WorkMateBE.Repositories
         {
             _context = context;
         }
-        public bool CreatPost(Post post)
+        public bool CreatePost(Post post)
         {
             _context.Add(post);
             return Saved();

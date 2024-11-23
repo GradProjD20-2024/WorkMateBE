@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using WorkMateBE.Dtos.PostDto;
 using WorkMateBE.Interfaces;
 using WorkMateBE.Models;
 using WorkMateBE.Responses;
@@ -10,10 +12,14 @@ namespace WorkMateBE.Controllers
     public class PostController : ControllerBase
     {
         private readonly IPostRepository _postRepository;
+        private readonly IAccountRepository _accountRepository;
+        private readonly IMapper _mapper;
 
-        public PostController(IPostRepository postRepository)
+        public PostController(IPostRepository postRepository, IAccountRepository accountRepository, IMapper mapper)
         {
             _postRepository = postRepository;
+            _accountRepository = accountRepository;
+            _mapper = mapper;
         }
 
         // GET: api/Post
@@ -77,9 +83,10 @@ namespace WorkMateBE.Controllers
 
         // POST: api/Post
         [HttpPost]
-        public IActionResult CreatePost([FromBody] Post post)
+        public IActionResult CreatePost([FromBody] PostCreateDto postCreate)
         {
-            if (post == null)
+            
+            if (postCreate == null)
             {
                 return BadRequest(new ApiResponse
                 {
@@ -88,8 +95,17 @@ namespace WorkMateBE.Controllers
                     Data = null
                 });
             }
-
-            if (!_postRepository.CreatPost(post))
+            if (_accountRepository.GetAccountById(postCreate.AccountId) == null)
+            {
+                return NotFound(new ApiResponse
+                {
+                    StatusCode = 404,
+                    Message = "Account Not Found",
+                    Data = null
+                });
+            }
+            var post = _mapper.Map<Post>(postCreate);
+            if (!_postRepository.CreatePost(post))
             {
                 return StatusCode(500, new ApiResponse
                 {
@@ -99,15 +115,6 @@ namespace WorkMateBE.Controllers
                 });
             }
 
-            if (!_postRepository.Saved())
-            {
-                return StatusCode(500, new ApiResponse
-                {
-                    StatusCode = 500,
-                    Message = "An error occurred while saving the post",
-                    Data = null
-                });
-            }
 
             return CreatedAtAction(nameof(GetPostById), new { postId = post.Id }, new ApiResponse
             {

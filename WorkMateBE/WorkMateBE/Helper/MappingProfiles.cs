@@ -3,6 +3,7 @@ using WorkMateBE.Dtos.AccountDto;
 using WorkMateBE.Dtos.AssetDto;
 using WorkMateBE.Dtos.DepartmentDto;
 using WorkMateBE.Dtos.EmployeeDto;
+using WorkMateBE.Dtos.PostDto;
 using WorkMateBE.Dtos.RoleDto;
 using WorkMateBE.Models;
 
@@ -21,6 +22,7 @@ namespace WorkMateBE.Helper
             CreateMap<Asset, AssetCreateDto>().ReverseMap();
             CreateMap<Asset, AssetGetDto>().ReverseMap();
             CreateMap<Role, NewRoleDto>().ReverseMap();
+            CreateMap<Post, PostCreateDto>().ReverseMap();
         }
     }
 }

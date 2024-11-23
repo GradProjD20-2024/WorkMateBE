@@ -23,7 +23,6 @@
   <ItemGroup>
     <Folder Include="Dtos\AttendanceDto\" />
     <Folder Include="Dtos\LeaveRequestDto\" />
-    <Folder Include="Dtos\PostDto\" />
     <Folder Include="Dtos\SalaryDto\" />
   </ItemGroup>
 
