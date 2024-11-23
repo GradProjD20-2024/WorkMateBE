@@ -14,6 +14,8 @@ namespace WorkMateBE.Data
         public DbSet<LeaveRequest> LeaveRequests { get; set; }
         public DbSet<Salary> Salaries { get; set; }
         public DbSet<Role> Roles { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
         /*protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
