@@ -1,6 +1,6 @@
 ﻿namespace WorkMateBE.Dtos.PostDto
 {
-    public class PostCreateDto
+    public class PostUpdateDto
     {
         public string Content { get; set; }
         public string? ImageUrl { get; set; }

@@ -50,9 +50,15 @@ namespace WorkMateBE.Repositories
             return saved > 0 ? true : false;
         }
 
-        public bool UpdatePost(Post post)
+        public bool UpdatePost(int postId, Post postUpdate)
         {
-            throw new NotImplementedException();
+            var post = GetPostById(postId);
+            post.Content = postUpdate.Content;
+            post.ImageUrl = postUpdate.ImageUrl;
+            post.Status = postUpdate.Status;
+            _context.Update(post);
+            return Saved();
+
         }
     }
 }

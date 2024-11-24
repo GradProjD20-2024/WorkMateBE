@@ -23,6 +23,8 @@ namespace WorkMateBE.Helper
             CreateMap<Asset, AssetGetDto>().ReverseMap();
             CreateMap<Role, NewRoleDto>().ReverseMap();
             CreateMap<Post, PostCreateDto>().ReverseMap();
+            CreateMap<Post, PostUpdateDto>().ReverseMap();
+            CreateMap<Post, PostGetDto>().ReverseMap();
         }
     }
 }

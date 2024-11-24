@@ -455,11 +455,16 @@
   {
     "ContainingType": "WorkMateBE.Controllers.PostController",
     "Method": "CreatePost",
-    "RelativePath": "api/Post",
+    "RelativePath": "api/Post/{accountId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "accountId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
       {
         "Name": "postCreate",
         "Type": "WorkMateBE.Dtos.PostDto.PostCreateDto",
@@ -498,8 +503,8 @@
         "IsRequired": true
       },
       {
-        "Name": "post",
-        "Type": "WorkMateBE.Models.Post",
+        "Name": "postUpdate",
+        "Type": "WorkMateBE.Dtos.PostDto.PostUpdateDto",
         "IsRequired": true
       }
     ],
