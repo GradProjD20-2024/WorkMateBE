@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -214,10 +215,14 @@ namespace WorkMateBE.Controllers
         [HttpPost("change-password/{accountId}")]
         public IActionResult ChangePassword([FromBody] AccountChangePw pass, int accountId)
         {
-            var currentUserId = int.Parse(User.Identity?.Name ?? "0");
-            if (currentUserId == accountId)
+            // Kiểm tra quyền: chỉ cho phép cập nhật nếu accountId khớp với post.AccountId
+            if (accountId != GetAccountIdFromToken())
             {
-                if (!ModelState.IsValid)
+                return Forbid();
+            }
+
+
+            if (!ModelState.IsValid)
                 {
                     return BadRequest(ModelState);
                 }
@@ -258,10 +263,9 @@ namespace WorkMateBE.Controllers
                     Data = null
                 });
             }
-            return Forbid();
 
 
-        }
+
         [Authorize(Roles = "1")]
         [HttpPost("reset-password/{accountId}")]
         public IActionResult ResetPassword(int accountId)
@@ -323,6 +327,24 @@ namespace WorkMateBE.Controllers
 
             var tokenHandler = new JwtSecurityTokenHandler();
             return tokenHandler.WriteToken(token);
+        }
+        private int GetAccountIdFromToken()
+        {
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
+
+            if (identity != null)
+            {
+                var accountIdClaim = identity.FindFirst("Id");
+                if (accountIdClaim != null)
+                {
+                    if (int.TryParse(accountIdClaim.Value, out var accountId))
+                    {
+                        return accountId;
+                    }
+                }
+            }
+
+            throw new UnauthorizedAccessException("AccountId not found in token");
         }
 
     }

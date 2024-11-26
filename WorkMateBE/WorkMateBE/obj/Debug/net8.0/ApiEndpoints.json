@@ -269,6 +269,54 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WorkMateBE.Controllers.CommentController",
+    "Method": "CreateComment",
+    "RelativePath": "api/Comment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "comment",
+        "Type": "WorkMateBE.Models.Comment",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WorkMateBE.Controllers.CommentController",
+    "Method": "DeleteComment",
+    "RelativePath": "api/Comment/{commentId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "commentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WorkMateBE.Controllers.CommentController",
+    "Method": "GetCommentsByPostId",
+    "RelativePath": "api/Comment/Post/{postId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WorkMateBE.Controllers.DepartmentController",
     "Method": "GetAllDepartments",
     "RelativePath": "api/Department",

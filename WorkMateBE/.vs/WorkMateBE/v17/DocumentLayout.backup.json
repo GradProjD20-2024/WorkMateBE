@@ -1,46 +1,58 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\",
+  "WorkspaceRootPath": "D:\\Study\\WorkMateBE\\WorkMateBE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\workmate\\workmatebe\\workmatebe\\workmatebe\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\workmate\\workmatebe\\workmatebe\\workmatebe\\dtos\\postdto\\postcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\dtos\\postdto\\postcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\workmate\\workmatebe\\workmatebe\\workmatebe\\dtos\\postdto\\postupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\dtos\\postdto\\postupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\workmate\\workmatebe\\workmatebe\\workmatebe\\helper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\helper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\workmate\\workmatebe\\workmatebe\\workmatebe\\repositories\\postrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\repositories\\postrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\workmate\\workmatebe\\workmatebe\\workmatebe\\interfaces\\ipostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\interfaces\\ipostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\workmate\\workmatebe\\workmatebe\\workmatebe\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\study\\workmatebe\\workmatebe\\workmatebe\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\workmate\\workmatebe\\workmatebe\\workmatebe\\workmatebe.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\workmatebe.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\study\\workmatebe\\workmatebe\\workmatebe\\interfaces\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\interfaces\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\workmate\\workmatebe\\workmatebe\\workmatebe\\models\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\models\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\study\\workmatebe\\workmatebe\\workmatebe\\models\\leaverequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\models\\leaverequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\workmate\\workmatebe\\workmatebe\\workmatebe\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\study\\workmatebe\\workmatebe\\workmatebe\\dtos\\accountdto\\accountgetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\dtos\\accountdto\\accountgetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\study\\workmatebe\\workmatebe\\workmatebe\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\study\\workmatebe\\workmatebe\\workmatebe\\models\\attendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\models\\attendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\study\\workmatebe\\workmatebe\\workmatebe\\repositories\\attendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\repositories\\attendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\study\\workmatebe\\workmatebe\\workmatebe\\repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\study\\workmatebe\\workmatebe\\workmatebe\\repositories\\assetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\repositories\\assetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\study\\workmatebe\\workmatebe\\workmatebe\\models\\asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\models\\asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\study\\workmatebe\\workmatebe\\workmatebe\\controllers\\salarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\controllers\\salarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\study\\workmatebe\\workmatebe\\workmatebe\\interfaces\\isalaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\interfaces\\isalaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|d:\\study\\workmatebe\\workmatebe\\workmatebe\\repositories\\salaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7FBFE16-8042-49A4-B3B4-D17F42F9E2F3}|WorkMateBE\\WorkMateBE.csproj|solutionrelative:workmatebe\\repositories\\salaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -49,144 +61,181 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "DockedWidth": 85,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "WorkMateBE\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "WorkMateBE\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAM0AAAAAAAAAAAAwwNgAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T09:00:35.588Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "WorkMateBE",
-              "DocumentMoniker": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\WorkMateBE.csproj",
-              "RelativeDocumentMoniker": "WorkMateBE\\WorkMateBE.csproj",
-              "ToolTip": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\WorkMateBE.csproj",
-              "RelativeToolTip": "WorkMateBE\\WorkMateBE.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-24T08:55:26.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MappingProfiles.cs",
-              "DocumentMoniker": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Helper\\MappingProfiles.cs",
-              "RelativeDocumentMoniker": "WorkMateBE\\Helper\\MappingProfiles.cs",
-              "ToolTip": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Helper\\MappingProfiles.cs",
-              "RelativeToolTip": "WorkMateBE\\Helper\\MappingProfiles.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T08:42:39.862Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PostUpdateDto.cs",
-              "DocumentMoniker": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Dtos\\PostDto\\PostUpdateDto.cs",
-              "RelativeDocumentMoniker": "WorkMateBE\\Dtos\\PostDto\\PostUpdateDto.cs",
-              "ToolTip": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Dtos\\PostDto\\PostUpdateDto.cs",
-              "RelativeToolTip": "WorkMateBE\\Dtos\\PostDto\\PostUpdateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "LeaveRequest.cs",
+              "DocumentMoniker": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Models\\LeaveRequest.cs",
+              "RelativeDocumentMoniker": "WorkMateBE\\Models\\LeaveRequest.cs",
+              "ToolTip": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Models\\LeaveRequest.cs",
+              "RelativeToolTip": "WorkMateBE\\Models\\LeaveRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T08:35:41.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PostCreateDto.cs",
-              "DocumentMoniker": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Dtos\\PostDto\\PostCreateDto.cs",
-              "RelativeDocumentMoniker": "WorkMateBE\\Dtos\\PostDto\\PostCreateDto.cs",
-              "ToolTip": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Dtos\\PostDto\\PostCreateDto.cs",
-              "RelativeToolTip": "WorkMateBE\\Dtos\\PostDto\\PostCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T14:43:19.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PostController.cs",
-              "DocumentMoniker": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Controllers\\PostController.cs",
-              "RelativeDocumentMoniker": "WorkMateBE\\Controllers\\PostController.cs",
-              "ToolTip": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Controllers\\PostController.cs",
-              "RelativeToolTip": "WorkMateBE\\Controllers\\PostController.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAWwFwAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T13:45:06.447Z",
+              "WhenOpened": "2024-11-21T01:58:04.307Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "PostRepository.cs",
-              "DocumentMoniker": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Repositories\\PostRepository.cs",
-              "RelativeDocumentMoniker": "WorkMateBE\\Repositories\\PostRepository.cs",
-              "ToolTip": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Repositories\\PostRepository.cs",
-              "RelativeToolTip": "WorkMateBE\\Repositories\\PostRepository.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAjwBUAAAAUAAAAAAAAAA==",
+              "Title": "Account.cs",
+              "DocumentMoniker": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Models\\Account.cs",
+              "RelativeDocumentMoniker": "WorkMateBE\\Models\\Account.cs",
+              "ToolTip": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Models\\Account.cs",
+              "RelativeToolTip": "WorkMateBE\\Models\\Account.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T13:33:25.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T03:43:38.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AccountGetDto.cs",
+              "DocumentMoniker": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Dtos\\AccountDto\\AccountGetDto.cs",
+              "RelativeDocumentMoniker": "WorkMateBE\\Dtos\\AccountDto\\AccountGetDto.cs",
+              "ToolTip": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Dtos\\AccountDto\\AccountGetDto.cs",
+              "RelativeToolTip": "WorkMateBE\\Dtos\\AccountDto\\AccountGetDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T03:43:25.995Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "IPostRepository.cs",
-              "DocumentMoniker": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Interfaces\\IPostRepository.cs",
-              "RelativeDocumentMoniker": "WorkMateBE\\Interfaces\\IPostRepository.cs",
-              "ToolTip": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Interfaces\\IPostRepository.cs",
-              "RelativeToolTip": "WorkMateBE\\Interfaces\\IPostRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAANAAAAAAAAAA==",
+              "Title": "Attendance.cs",
+              "DocumentMoniker": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Models\\Attendance.cs",
+              "RelativeDocumentMoniker": "WorkMateBE\\Models\\Attendance.cs",
+              "ToolTip": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Models\\Attendance.cs",
+              "RelativeToolTip": "WorkMateBE\\Models\\Attendance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T12:57:35.448Z",
+              "WhenOpened": "2024-11-18T04:12:53.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "WorkMateBE\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "WorkMateBE\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAANIAAAAAAAAAAADwv9kAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T02:50:34.76Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Comment.cs",
-              "DocumentMoniker": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Models\\Comment.cs",
-              "RelativeDocumentMoniker": "WorkMateBE\\Models\\Comment.cs",
-              "ToolTip": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Models\\Comment.cs",
-              "RelativeToolTip": "WorkMateBE\\Models\\Comment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "IAccountRepository.cs",
+              "DocumentMoniker": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Interfaces\\IAccountRepository.cs",
+              "RelativeDocumentMoniker": "WorkMateBE\\Interfaces\\IAccountRepository.cs",
+              "ToolTip": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Interfaces\\IAccountRepository.cs",
+              "RelativeToolTip": "WorkMateBE\\Interfaces\\IAccountRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T12:49:59.413Z"
+              "WhenOpened": "2024-11-18T02:50:14.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Repositories\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "WorkMateBE\\Repositories\\AccountRepository.cs",
+              "ToolTip": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Repositories\\AccountRepository.cs",
+              "RelativeToolTip": "WorkMateBE\\Repositories\\AccountRepository.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAkwI0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T02:23:22.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AttendanceRepository.cs",
+              "DocumentMoniker": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Repositories\\AttendanceRepository.cs",
+              "RelativeDocumentMoniker": "WorkMateBE\\Repositories\\AttendanceRepository.cs",
+              "ToolTip": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Repositories\\AttendanceRepository.cs",
+              "RelativeToolTip": "WorkMateBE\\Repositories\\AttendanceRepository.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAwwJMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T10:18:02.337Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Post.cs",
-              "DocumentMoniker": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Models\\Post.cs",
-              "RelativeDocumentMoniker": "WorkMateBE\\Models\\Post.cs",
-              "ToolTip": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Models\\Post.cs",
-              "RelativeToolTip": "WorkMateBE\\Models\\Post.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAkAAAAqAAAAAAAAAA==",
+              "Title": "AssetRepository.cs",
+              "DocumentMoniker": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Repositories\\AssetRepository.cs",
+              "RelativeDocumentMoniker": "WorkMateBE\\Repositories\\AssetRepository.cs",
+              "ToolTip": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Repositories\\AssetRepository.cs",
+              "RelativeToolTip": "WorkMateBE\\Repositories\\AssetRepository.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAUwDEAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T12:48:03.279Z"
+              "WhenOpened": "2024-11-12T04:24:45.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Asset.cs",
+              "DocumentMoniker": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Models\\Asset.cs",
+              "RelativeDocumentMoniker": "WorkMateBE\\Models\\Asset.cs",
+              "ToolTip": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Models\\Asset.cs",
+              "RelativeToolTip": "WorkMateBE\\Models\\Asset.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T04:24:05.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ISalaryRepository.cs",
+              "DocumentMoniker": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Interfaces\\ISalaryRepository.cs",
+              "RelativeDocumentMoniker": "WorkMateBE\\Interfaces\\ISalaryRepository.cs",
+              "ToolTip": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Interfaces\\ISalaryRepository.cs",
+              "RelativeToolTip": "WorkMateBE\\Interfaces\\ISalaryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T04:16:33.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SalaryRepository.cs",
+              "DocumentMoniker": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Repositories\\SalaryRepository.cs",
+              "RelativeDocumentMoniker": "WorkMateBE\\Repositories\\SalaryRepository.cs",
+              "ToolTip": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Repositories\\SalaryRepository.cs",
+              "RelativeToolTip": "WorkMateBE\\Repositories\\SalaryRepository.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAQwIsAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T03:17:09.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SalaryController.cs",
+              "DocumentMoniker": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Controllers\\SalaryController.cs",
+              "RelativeDocumentMoniker": "WorkMateBE\\Controllers\\SalaryController.cs",
+              "ToolTip": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Controllers\\SalaryController.cs",
+              "RelativeToolTip": "WorkMateBE\\Controllers\\SalaryController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwDEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T02:49:44.729Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 251,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             }
           ]
         }
