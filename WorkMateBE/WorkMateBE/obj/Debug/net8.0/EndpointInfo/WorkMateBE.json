@@ -492,17 +492,29 @@
           "content": {
             "application/json": {
               "schema": {
+<<<<<<< HEAD
                 "$ref": "#/components/schemas/CreateCommentDto"
+=======
+                "$ref": "#/components/schemas/Comment"
+>>>>>>> 6eab0a21333b2419ace004a3fb83b476a04b4fcd
               }
             },
             "text/json": {
               "schema": {
+<<<<<<< HEAD
                 "$ref": "#/components/schemas/CreateCommentDto"
+=======
+                "$ref": "#/components/schemas/Comment"
+>>>>>>> 6eab0a21333b2419ace004a3fb83b476a04b4fcd
               }
             },
             "application/*+json": {
               "schema": {
+<<<<<<< HEAD
                 "$ref": "#/components/schemas/CreateCommentDto"
+=======
+                "$ref": "#/components/schemas/Comment"
+>>>>>>> 6eab0a21333b2419ace004a3fb83b476a04b4fcd
               }
             }
           }
@@ -820,6 +832,7 @@
             "description": "Success"
           }
         }
+<<<<<<< HEAD
       },
       "post": {
         "tags": [
@@ -849,6 +862,8 @@
             "description": "Success"
           }
         }
+=======
+>>>>>>> 6eab0a21333b2419ace004a3fb83b476a04b4fcd
       }
     },
     "/api/Post/{postId}": {
@@ -958,6 +973,51 @@
         }
       }
     },
+<<<<<<< HEAD
+=======
+    "/api/Post/{accountId}": {
+      "post": {
+        "tags": [
+          "Post"
+        ],
+        "parameters": [
+          {
+            "name": "accountId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostCreateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostCreateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostCreateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+>>>>>>> 6eab0a21333b2419ace004a3fb83b476a04b4fcd
     "/api/Role": {
       "post": {
         "tags": [
@@ -1122,6 +1182,54 @@
   },
   "components": {
     "schemas": {
+      "Account": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "avatarUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "faceUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "employeeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "employee": {
+            "$ref": "#/components/schemas/Employee"
+          },
+          "roleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "role": {
+            "$ref": "#/components/schemas/Role"
+          }
+        },
+        "additionalProperties": false
+      },
       "AccountChangePw": {
         "required": [
           "confirmPassword",
@@ -1229,16 +1337,76 @@
         },
         "additionalProperties": false
       },
+<<<<<<< HEAD
       "CreateCommentDto": {
         "type": "object",
         "properties": {
+=======
+      "Comment": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+>>>>>>> 6eab0a21333b2419ace004a3fb83b476a04b4fcd
           "content": {
             "type": "string",
             "nullable": true
           },
+<<<<<<< HEAD
           "postId": {
             "type": "integer",
             "format": "int32"
+=======
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "postId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "post": {
+            "$ref": "#/components/schemas/Post"
+          },
+          "accountId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "account": {
+            "$ref": "#/components/schemas/Account"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Department": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+>>>>>>> 6eab0a21333b2419ace004a3fb83b476a04b4fcd
           }
         },
         "additionalProperties": false
@@ -1257,6 +1425,59 @@
           "status": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Employee": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthday": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "identificationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "position": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "baseSalary": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "departmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "department": {
+            "$ref": "#/components/schemas/Department"
           }
         },
         "additionalProperties": false
@@ -1317,6 +1538,42 @@
         },
         "additionalProperties": false
       },
+<<<<<<< HEAD
+=======
+      "Post": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "content": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "accountId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "account": {
+            "$ref": "#/components/schemas/Account"
+          }
+        },
+        "additionalProperties": false
+      },
+>>>>>>> 6eab0a21333b2419ace004a3fb83b476a04b4fcd
       "PostCreateDto": {
         "type": "object",
         "properties": {
@@ -1352,6 +1609,31 @@
           }
         },
         "additionalProperties": false
+<<<<<<< HEAD
+=======
+      },
+      "Role": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+>>>>>>> 6eab0a21333b2419ace004a3fb83b476a04b4fcd
       }
     },
     "securitySchemes": {

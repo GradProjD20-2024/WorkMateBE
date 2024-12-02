@@ -3113,23 +3113,31 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\ADMIN\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+>>>>>>> 6eab0a21333b2419ace004a3fb83b476a04b4fcd
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\WorkMateBE.csproj",
+      "projectUniqueName": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\WorkMateBE.csproj",
       "projectName": "WorkMateBE",
-      "projectPath": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\WorkMateBE.csproj",
-      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\obj\\",
+      "projectPath": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\WorkMateBE.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 6eab0a21333b2419ace004a3fb83b476a04b4fcd
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
