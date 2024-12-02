@@ -10,7 +10,9 @@ namespace WorkMateBE.Dtos.AccountDto
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Password is required")]
-        [MinLength(6, ErrorMessage = "Password must be at least 6 characters")]
+        [MinLength(8, ErrorMessage = "Password must be at least 8 characters")]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$",
+            ErrorMessage = "Password must be at least 8 characters, contain at least one lowercase letter, one uppercase letter, one number, and one special character.")]
         public string Password { get; set; }
 
         //[Url(ErrorMessage = "Invalid URL format for AvatarUrl")]
