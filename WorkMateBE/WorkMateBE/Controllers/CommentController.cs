@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using WorkMateBE.Dtos.CommentDto;
 using WorkMateBE.Interfaces;
 using WorkMateBE.Models;
 using WorkMateBE.Responses;
@@ -40,20 +41,21 @@ namespace WorkMateBE.Controllers
             }
 
             var comments = _commentRepository.GetCommentByPostId(postId);
+            var commentMap = _mapper.Map<List<GetCommentDto>>(comments);
 
             return Ok(new ApiResponse
             {
                 StatusCode = 200,
                 Message = "Get comments by post success",
-                Data = comments
+                Data = commentMap
             });
         }
 
         // POST: api/Comment
         [HttpPost]
-        public IActionResult CreateComment([FromBody] Comment comment)
+        public IActionResult CreateComment([FromBody] CreateCommentDto model)
         {
-            if (comment == null)
+            if (model == null)
             {
                 return BadRequest(new ApiResponse
                 {
@@ -63,21 +65,17 @@ namespace WorkMateBE.Controllers
                 });
             }
 
-            var post = _postRepository.GetPostById(comment.PostId);
+            var post = _postRepository.GetPostById(model.PostId);
             if (post == null)
             {
                 return NotFound(new ApiResponse
                 {
                     StatusCode = 404,
-                    Message = $"Post with ID {comment.PostId} not found",
+                    Message = $"Post with ID {model.PostId} not found",
                     Data = null
                 });
             }
-
-            comment.AccountId = GetAccountIdFromToken(); // Lấy AccountId từ token
-            comment.CreatedAt = DateTime.UtcNow;
-
-            if (!_commentRepository.CreateComment(comment))
+            if (!_commentRepository.CreateComment(GetAccountIdFromToken(), model.Content, model.PostId))
             {
                 return StatusCode(500, new ApiResponse
                 {
@@ -91,7 +89,7 @@ namespace WorkMateBE.Controllers
             {
                 StatusCode = 201,
                 Message = "Comment created successfully",
-                Data = comment
+                Data = model
             });
         }
 
@@ -134,14 +132,13 @@ namespace WorkMateBE.Controllers
             });
         }
 
-        // Helper: Lấy AccountId từ token
         private int GetAccountIdFromToken()
         {
             var identity = HttpContext.User.Identity as ClaimsIdentity;
 
             if (identity != null)
             {
-                var accountIdClaim = identity.FindFirst("AccountId");
+                var accountIdClaim = identity.FindFirst("Id");
                 if (accountIdClaim != null)
                 {
                     if (int.TryParse(accountIdClaim.Value, out var accountId))

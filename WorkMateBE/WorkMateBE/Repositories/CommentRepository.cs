@@ -12,8 +12,19 @@ namespace WorkMateBE.Repositories
         {
             _context = context;
         }
-        public bool CreateComment(Comment comment)
+        public bool CreateComment(int userId, string content, int postId)
         {
+            var account = _context.Accounts.Find(userId);
+            var employee = _context.Employees.Find(account.EmployeeId);
+            var comment = new Comment
+            {
+                FullName = employee.FullName,
+                Content = content,
+                Status = 0,
+                PostId = postId,
+                AccountId = userId
+            };
+
            _context.Add(comment);
             return Save();
         }

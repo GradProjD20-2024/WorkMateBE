@@ -4,7 +4,7 @@ namespace WorkMateBE.Interfaces
 {
     public interface IPostRepository
     {
-        bool CreatePost (Post post);
+        bool CreatePost(int accountId, string content, string imageUrl);
         bool UpdatePost (int postId, Post postUpdate);
         bool DeletePost (int postId);
         Post GetPostById (int postId);

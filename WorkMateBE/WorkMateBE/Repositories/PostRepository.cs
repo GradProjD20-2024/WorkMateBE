@@ -12,8 +12,17 @@ namespace WorkMateBE.Repositories
         {
             _context = context;
         }
-        public bool CreatePost(Post post)
+        public bool CreatePost(int accountId, string content, string imageUrl)
         {
+            var account = _context.Accounts.Find(accountId);
+            var employee = _context.Employees.Find(account.EmployeeId);
+            var post = new Post
+            {
+                FullName = employee.FullName,
+                AccountId = accountId,
+                Content = content,
+                ImageUrl = imageUrl
+            };
             _context.Add(post);
             return Saved();
 

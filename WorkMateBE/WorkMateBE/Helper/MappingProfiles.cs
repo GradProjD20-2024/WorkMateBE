@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using WorkMateBE.Dtos.AccountDto;
 using WorkMateBE.Dtos.AssetDto;
+using WorkMateBE.Dtos.CommentDto;
 using WorkMateBE.Dtos.DepartmentDto;
 using WorkMateBE.Dtos.EmployeeDto;
 using WorkMateBE.Dtos.PostDto;
@@ -25,6 +26,8 @@ namespace WorkMateBE.Helper
             CreateMap<Post, PostCreateDto>().ReverseMap();
             CreateMap<Post, PostUpdateDto>().ReverseMap();
             CreateMap<Post, PostGetDto>().ReverseMap();
+            CreateMap<Comment, GetCommentDto>().ReverseMap();
+
         }
     }
 }

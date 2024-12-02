@@ -91,13 +91,10 @@ namespace WorkMateBE.Controllers
         }
 
         // POST: api/Post
-        [HttpPost("{accountId}")]
-        public IActionResult CreatePost(int accountId, [FromBody] PostCreateDto postCreate)
+        [HttpPost]
+        public IActionResult CreatePost([FromBody] PostCreateDto postCreate)
         {
-            if (accountId != GetAccountIdFromToken())
-            {
-                return Forbid();
-            }
+            var accountId = GetAccountIdFromToken();          
             if (postCreate == null)
             {
                 return BadRequest(new ApiResponse
@@ -106,19 +103,8 @@ namespace WorkMateBE.Controllers
                     Message = "Post data is null",
                     Data = null
                 });
-            }
-            if (_accountRepository.GetAccountById(accountId) == null)
-            {
-                return NotFound(new ApiResponse
-                {
-                    StatusCode = 404,
-                    Message = "Account Not Found",
-                    Data = null
-                });
-            }
-            var post = _mapper.Map<Post>(postCreate);
-            post.AccountId = accountId;
-            if (!_postRepository.CreatePost(post))
+            }          
+            if (!_postRepository.CreatePost(accountId, postCreate.Content, postCreate.ImageUrl))
             {
                 return StatusCode(500, new ApiResponse
                 {
@@ -129,11 +115,11 @@ namespace WorkMateBE.Controllers
             }
 
 
-            return CreatedAtAction(nameof(GetPostById), new { postId = post.Id }, new ApiResponse
+            return Ok(new ApiResponse
             {
-                StatusCode = 201,
-                Message = "Post created successfully",
-                Data = post
+                StatusCode = 200,
+                Message = "Create Post successfully",
+                Data = null
             });
         }
 
