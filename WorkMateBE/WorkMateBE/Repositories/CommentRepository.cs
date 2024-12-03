@@ -20,6 +20,7 @@ namespace WorkMateBE.Repositories
             {
                 FullName = employee.FullName,
                 Content = content,
+                AvatarUrl = account.AvatarUrl,
                 Status = 0,
                 PostId = postId,
                 AccountId = userId

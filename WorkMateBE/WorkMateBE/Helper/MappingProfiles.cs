@@ -12,6 +12,7 @@ namespace WorkMateBE.Helper
 {
     public class MappingProfiles : Profile
     {
+
         public MappingProfiles()
         {
             CreateMap<Department, DepartmentCreateDto>().ReverseMap();

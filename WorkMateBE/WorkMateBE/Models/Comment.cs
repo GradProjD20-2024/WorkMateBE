@@ -5,6 +5,7 @@
         public int Id { get; set; }
         public string FullName { get; set; }
         public string Content { get; set; }
+        public string AvatarUrl {  get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public int Status { get; set; }
         public int PostId { get; set; }

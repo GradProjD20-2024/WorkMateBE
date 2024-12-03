@@ -42,7 +42,6 @@ namespace WorkMateBE.Controllers
 
             var comments = _commentRepository.GetCommentByPostId(postId);
             var commentMap = _mapper.Map<List<GetCommentDto>>(comments);
-
             return Ok(new ApiResponse
             {
                 StatusCode = 200,
