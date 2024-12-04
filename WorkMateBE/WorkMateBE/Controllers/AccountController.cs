@@ -29,7 +29,7 @@ namespace WorkMateBE.Controllers
         }
 
         // GET: api/account
-        [Authorize(Roles = "1,2")]
+        [Authorize(Roles = "1")]
         [HttpGet]
         public IActionResult GetAllAccounts()
         {
@@ -45,24 +45,25 @@ namespace WorkMateBE.Controllers
 
 
         // GET: api/account/{id}
-        /*[Authorize(Roles = "1,2")]*/
+        [Authorize]
         [HttpGet("{id}")]
         public IActionResult GetAccountById(int id)
         {
-            // Lấy thông tin user hiện tại từ token
-            var currentUserId = int.Parse(User.Identity?.Name ?? "0");
-
-            // Kiểm tra nếu user có quyền truy cập (role 1, 2 hoặc là chủ sở hữu)
-            if (User.IsInRole("1") || User.IsInRole("2") || currentUserId == id)
+            var currentUserId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var currentUserRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+            if (currentUserRole == "1" || currentUserRole == "2" || currentUserId == id)
             {
                 var account = _accountRepository.GetAccountById(id);
                 if (account == null)
+                {
                     return NotFound(new ApiResponse
                     {
                         StatusCode = 404,
                         Message = "Account ID not exists",
                         Data = null
                     });
+                }
+
                 var accountDto = _mapper.Map<AccountGetDto>(account);
                 return Ok(new ApiResponse
                 {
@@ -77,7 +78,7 @@ namespace WorkMateBE.Controllers
         }
 
         // POST: api/account
-        /*[Authorize(Roles = "1")]*/
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult CreateAccount([FromBody] AccountCreateDto accountDto)
         {
@@ -212,11 +213,14 @@ namespace WorkMateBE.Controllers
                 Data = GenerateJwtToken(account)
             });
         }
+        [Authorize]
         [HttpPost("change-password/{accountId}")]
         public IActionResult ChangePassword([FromBody] AccountChangePw pass, int accountId)
         {
+            var currentUserId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var currentUserRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
             // Kiểm tra quyền: chỉ cho phép cập nhật nếu accountId khớp với post.AccountId
-            if (accountId != GetAccountIdFromToken())
+            if (accountId != currentUserId)
             {
                 return Forbid();
             }
