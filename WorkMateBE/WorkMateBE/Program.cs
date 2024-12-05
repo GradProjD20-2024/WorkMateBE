@@ -98,6 +98,8 @@ if (app.Environment.IsDevelopment())
     c.RoutePrefix = string.Empty; // Sử dụng nếu muốn Swagger UI ở trang chính
 });
 }
+app.UseStaticFiles();
+
 app.UseCors("AllowLocalhost3000");
 app.UseHttpsRedirection();
 
