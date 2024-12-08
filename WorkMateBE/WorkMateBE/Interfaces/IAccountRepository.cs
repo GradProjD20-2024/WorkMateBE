@@ -11,6 +11,7 @@ namespace WorkMateBE.Interfaces
         ICollection<Account> GetAllAccounts();
         Account GetAccountById(int accountId);
         Account GetAccountByEmail(string email);
+        Account GetAccountByEmployeeId(int employeeId);
         bool CheckEmail(string email);
         bool Login(AccountLogin accountLogin);
         bool CheckEmployee(int employeeId);

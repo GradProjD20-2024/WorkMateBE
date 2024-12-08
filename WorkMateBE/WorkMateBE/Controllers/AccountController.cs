@@ -76,7 +76,33 @@ namespace WorkMateBE.Controllers
             // Nếu không có quyền truy cập
             return Forbid();
         }
+        [Authorize(Roles = "1")]
+        [HttpGet("GetAccountByEmployeeId/{id}")]
+        public IActionResult GetAccountByEmployeeId(int id)
+        {
+          
 
+                var account = _accountRepository.GetAccountByEmployeeId(id);
+                if (account == null)
+                {
+                    return NotFound(new ApiResponse
+                    {
+                        StatusCode = 404,
+                        Message = "Account ID not exists",
+                        Data = null
+                    });
+                }
+
+                var accountDto = _mapper.Map<AccountGetDto>(account);
+                return Ok(new ApiResponse
+                {
+                    StatusCode = 200,
+                    Message = "Get Account success",
+                    Data = accountDto
+                });
+         }
+
+ 
         // POST: api/account
         [Authorize(Roles = "1")]
         [HttpPost]
@@ -130,14 +156,18 @@ namespace WorkMateBE.Controllers
         }
 
         // PUT: api/account/{id}
-        [Authorize(Roles = "1")]
+        [Authorize]
         [HttpPut("{id}")]
         public IActionResult UpdateAccount(int id, [FromBody] AccountCreateDto accountDto)
         {
             if (accountDto == null)
                 return BadRequest(ModelState);
-
+            
             var existingAccount = _accountRepository.GetAccountById(id);
+            if (id != GetAccountIdFromToken())
+            {
+                return Forbid();
+            }
             if (existingAccount == null)
                 return NotFound(new ApiResponse
                 {

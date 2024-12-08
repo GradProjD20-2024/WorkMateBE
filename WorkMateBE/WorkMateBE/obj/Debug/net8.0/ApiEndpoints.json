@@ -101,6 +101,22 @@
   },
   {
     "ContainingType": "WorkMateBE.Controllers.AccountController",
+    "Method": "GetAccountByEmployeeId",
+    "RelativePath": "api/Account/GetAccountByEmployeeId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WorkMateBE.Controllers.AccountController",
     "Method": "Login",
     "RelativePath": "api/Account/Login",
     "HttpMethod": "POST",

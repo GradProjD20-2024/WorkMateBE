@@ -112,6 +112,11 @@ namespace WorkMateBE.Repositories
             _context.Update(existingAccount);
             return Save();
         }
+        public Account GetAccountByEmployeeId (int employeeId)
+        {
+            var account = _context.Accounts.Where(p => p.EmployeeId == employeeId).FirstOrDefault();
+            return account;
+        }
         public bool CheckEmployee(int employeeId)
         {
             var account = _context.Accounts.Where(p => p.EmployeeId == employeeId).FirstOrDefault();
