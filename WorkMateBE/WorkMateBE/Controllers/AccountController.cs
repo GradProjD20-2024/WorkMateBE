@@ -83,19 +83,24 @@ namespace WorkMateBE.Controllers
 
 
             var account = _accountRepository.GetAccountByEmployeeId(id);
-            if (GetAccountIdFromToken() != account.Id)
+            if(GetRoleFromToken() != 1)
             {
-                return Forbid();
+                if (GetAccountIdFromToken() != account.Id)
+                {
+                    return Forbid();
+                }
             }
+            
             if (account == null)
             {
                 return NotFound(new ApiResponse
                 {
                     StatusCode = 404,
-                    Message = "Account ID not exists",
+                    Message = "Account not exists",
                     Data = null
                 });
             }
+            
 
             var accountDto = _mapper.Map<AccountGetDto>(account);
             return Ok(new ApiResponse
