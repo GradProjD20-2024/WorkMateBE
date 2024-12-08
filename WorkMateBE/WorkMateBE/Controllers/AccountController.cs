@@ -183,6 +183,15 @@ namespace WorkMateBE.Controllers
                     return Forbid();
                 }
             }
+            if (_accountRepository.GetAccountByEmail(accountDto.Email) != null)
+            {
+                return BadRequest(new ApiResponse
+                {
+                    StatusCode = 404,
+                    Message = "Email exists",
+                    Data = null
+                });
+            }
             var account = _mapper.Map<Account>(accountDto);
             if (!_accountRepository.UpdateAccount(id, account))
             {

@@ -102,13 +102,7 @@ namespace WorkMateBE.Repositories
 
             // Cập nhật các trường
             existingAccount.Email = account.Email;
-            existingAccount.Password = account.Password;
-            existingAccount.Role = account.Role;
             existingAccount.AvatarUrl = account.AvatarUrl;
-            existingAccount.FaceUrl = account.FaceUrl;
-            existingAccount.Status = account.Status;
-            existingAccount.EmployeeId = account.EmployeeId;
-
             _context.Update(existingAccount);
             return Save();
         }
