@@ -21,6 +21,7 @@ namespace WorkMateBE.Helper
             CreateMap<Employee, EmployeeGetDto>().ReverseMap();
             CreateMap<Account, AccountCreateDto>().ReverseMap();
             CreateMap<Account, AccountGetDto>().ReverseMap();
+            CreateMap<Account, AccountUpdateDto>().ReverseMap();
             CreateMap<Asset, AssetCreateDto>().ReverseMap();
             CreateMap<Asset, AssetGetDto>().ReverseMap();
             CreateMap<Role, NewRoleDto>().ReverseMap();

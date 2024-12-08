@@ -76,33 +76,37 @@ namespace WorkMateBE.Controllers
             // Nếu không có quyền truy cập
             return Forbid();
         }
-        [Authorize(Roles = "1")]
+        [Authorize]
         [HttpGet("GetAccountByEmployeeId/{id}")]
         public IActionResult GetAccountByEmployeeId(int id)
         {
-          
 
-                var account = _accountRepository.GetAccountByEmployeeId(id);
-                if (account == null)
-                {
-                    return NotFound(new ApiResponse
-                    {
-                        StatusCode = 404,
-                        Message = "Account ID not exists",
-                        Data = null
-                    });
-                }
 
-                var accountDto = _mapper.Map<AccountGetDto>(account);
-                return Ok(new ApiResponse
+            var account = _accountRepository.GetAccountByEmployeeId(id);
+            if (GetAccountIdFromToken() != account.Id)
+            {
+                return Forbid();
+            }
+            if (account == null)
+            {
+                return NotFound(new ApiResponse
                 {
-                    StatusCode = 200,
-                    Message = "Get Account success",
-                    Data = accountDto
+                    StatusCode = 404,
+                    Message = "Account ID not exists",
+                    Data = null
                 });
-         }
+            }
 
- 
+            var accountDto = _mapper.Map<AccountGetDto>(account);
+            return Ok(new ApiResponse
+            {
+                StatusCode = 200,
+                Message = "Get Account success",
+                Data = accountDto
+            });
+        }
+
+
         // POST: api/account
         [Authorize(Roles = "1")]
         [HttpPost]
@@ -110,7 +114,7 @@ namespace WorkMateBE.Controllers
         {
             if (accountDto == null)
                 return BadRequest(ModelState);
-            if (_employeeRepository.GetEmployeeById(accountDto.EmployeeId)==null)
+            if (_employeeRepository.GetEmployeeById(accountDto.EmployeeId) == null)
             {
                 return NotFound(new ApiResponse
                 {
@@ -128,7 +132,7 @@ namespace WorkMateBE.Controllers
                     Data = null
                 });
             }
-            
+
             // Kiểm tra email đã tồn tại
             if (_accountRepository.CheckEmail(accountDto.Email))
             {
@@ -139,7 +143,7 @@ namespace WorkMateBE.Controllers
                     Data = null
                 });
             }
-            
+
             var account = _mapper.Map<Account>(accountDto);
             if (!_accountRepository.CreateAccount(account))
             {
@@ -158,16 +162,13 @@ namespace WorkMateBE.Controllers
         // PUT: api/account/{id}
         [Authorize]
         [HttpPut("{id}")]
-        public IActionResult UpdateAccount(int id, [FromBody] AccountCreateDto accountDto)
+        public IActionResult UpdateAccount(int id, [FromBody] AccountUpdateDto accountDto)
         {
             if (accountDto == null)
                 return BadRequest(ModelState);
+
+            var existingAccount = _accountRepository.GetAccountById(id);           
             
-            var existingAccount = _accountRepository.GetAccountById(id);
-            if (id != GetAccountIdFromToken())
-            {
-                return Forbid();
-            }
             if (existingAccount == null)
                 return NotFound(new ApiResponse
                 {
@@ -175,7 +176,13 @@ namespace WorkMateBE.Controllers
                     Message = "Account ID not found",
                     Data = null
                 });
-
+            if (GetRoleFromToken() != 1)
+            {
+                if (id != GetAccountIdFromToken())
+                {
+                    return Forbid();
+                }
+            }
             var account = _mapper.Map<Account>(accountDto);
             if (!_accountRepository.UpdateAccount(id, account))
             {
@@ -200,7 +207,7 @@ namespace WorkMateBE.Controllers
             if (existingAccount == null)
                 return NotFound(new ApiResponse
                 {
-                    StatusCode = 404, 
+                    StatusCode = 404,
                     Message = "Account ID not found",
                     Data = null
                 });
@@ -220,7 +227,7 @@ namespace WorkMateBE.Controllers
         }
 
         [HttpPost("Login")]
-        public IActionResult Login([FromBody]AccountLogin accountLogin)
+        public IActionResult Login([FromBody] AccountLogin accountLogin)
         {
             if (!ModelState.IsValid)
             {
@@ -247,8 +254,7 @@ namespace WorkMateBE.Controllers
         [HttpPost("change-password/{accountId}")]
         public IActionResult ChangePassword([FromBody] AccountChangePw pass, int accountId)
         {
-            var currentUserId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value ?? "0");
-            var currentUserRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+            var currentUserId = GetAccountIdFromToken();
             // Kiểm tra quyền: chỉ cho phép cập nhật nếu accountId khớp với post.AccountId
             if (accountId != currentUserId)
             {
@@ -257,46 +263,46 @@ namespace WorkMateBE.Controllers
 
 
             if (!ModelState.IsValid)
-                {
-                    return BadRequest(ModelState);
-                }
+            {
+                return BadRequest(ModelState);
+            }
 
-                var account = _accountRepository.GetAccountById(accountId);
-                if (!BCrypt.Net.BCrypt.Verify(pass.OldPassword, account.Password))
+            var account = _accountRepository.GetAccountById(accountId);
+            if (!BCrypt.Net.BCrypt.Verify(pass.OldPassword, account.Password))
+            {
+                return BadRequest(new ApiResponse
                 {
-                    return BadRequest(new ApiResponse
-                    {
-                        StatusCode = 400,
-                        Message = "Old password is incorrect",
-                        Data = null
-                    });
+                    StatusCode = 400,
+                    Message = "Old password is incorrect",
+                    Data = null
+                });
 
-                }
-                if (pass.NewPassword != pass.ConfirmPassword)
+            }
+            if (pass.NewPassword != pass.ConfirmPassword)
+            {
+                return BadRequest(new ApiResponse
                 {
-                    return BadRequest(new ApiResponse
-                    {
-                        StatusCode = 400,
-                        Message = "Password and Confirm Password are not same",
-                        Data = null
-                    });
-                }
-                if (!_accountRepository.ChangePassword(accountId, pass.NewPassword))
-                {
-                    return BadRequest(new ApiResponse
-                    {
-                        StatusCode = 400,
-                        Message = "Something went wrong while change password",
-                        Data = null
-                    });
-                }
-                return Ok(new ApiResponse
-                {
-                    StatusCode = 200,
-                    Message = "Change password success",
+                    StatusCode = 400,
+                    Message = "Password and Confirm Password are not same",
                     Data = null
                 });
             }
+            if (!_accountRepository.ChangePassword(accountId, pass.NewPassword))
+            {
+                return BadRequest(new ApiResponse
+                {
+                    StatusCode = 400,
+                    Message = "Something went wrong while change password",
+                    Data = null
+                });
+            }
+            return Ok(new ApiResponse
+            {
+                StatusCode = 200,
+                Message = "Change password success",
+                Data = null
+            });
+        }
 
 
 
@@ -380,7 +386,31 @@ namespace WorkMateBE.Controllers
 
             throw new UnauthorizedAccessException("AccountId not found in token");
         }
+        private int GetRoleFromToken()
+        {
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
 
+            if (identity != null)
+            {
+                // Tìm claim có type là "Role"
+                var roleClaim = identity.FindFirst("Role");
+                if (roleClaim != null)
+                {
+                    // Chuyển đổi giá trị role từ chuỗi thành int
+                    if (int.TryParse(roleClaim.Value, out var role))
+                    {
+                        return role;
+                    }
+                    else
+                    {
+                        throw new UnauthorizedAccessException($"Invalid role value: {roleClaim.Value}");
+                    }
+                }
+            }
+
+            throw new UnauthorizedAccessException("Role not found in token");
+
+        }
     }
 }
  

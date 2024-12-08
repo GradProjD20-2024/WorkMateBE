@@ -56,7 +56,7 @@
       },
       {
         "Name": "accountDto",
-        "Type": "WorkMateBE.Dtos.AccountDto.AccountCreateDto",
+        "Type": "WorkMateBE.Dtos.AccountDto.AccountUpdateDto",
         "IsRequired": true
       }
     ],
