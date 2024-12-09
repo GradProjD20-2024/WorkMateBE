@@ -101,7 +101,6 @@ namespace WorkMateBE.Repositories
                 return false;
 
             // Cập nhật các trường
-            existingAccount.Email = account.Email;
             existingAccount.AvatarUrl = account.AvatarUrl;
             _context.Update(existingAccount);
             return Save();
