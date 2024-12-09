@@ -1261,10 +1261,6 @@
       "AccountUpdateDto": {
         "type": "object",
         "properties": {
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
           "avatarUrl": {
             "type": "string",
             "nullable": true

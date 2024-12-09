@@ -17,11 +17,8 @@ namespace WorkMateBE.Repositories
         {
             var employee = _context.Employees.Where(p => p.Id == employeeId).FirstOrDefault();
             int baseSalary = employee.BaseSalary;
-            Console.WriteLine(1);
             int bonus = CalculateBonus(baseSalary, CountWorkingHoursReality(employeeId, month,year), CountWorkingHoursStandard(month, year));
-            Console.WriteLine(1);
             int deduction = CalculateDeduction(employeeId, month, year);
-            Console.WriteLine(1);
             var Salary = new Salary
             {
                 BaseSalary = baseSalary,
@@ -33,7 +30,6 @@ namespace WorkMateBE.Repositories
                 EmployeeId = employeeId,
                 Status = 0,
             };
-            Console.WriteLine(1);
             _context.Add(Salary);
 
             return Save();
