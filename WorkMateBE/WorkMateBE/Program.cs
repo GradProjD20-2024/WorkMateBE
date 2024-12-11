@@ -2,14 +2,28 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Quartz;
 using System.Text;
 using WorkMateBE.Data;
 using WorkMateBE.Interfaces;
 using WorkMateBE.Repositories;
+using WorkMateBE.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddQuartzHostedService(q => q.WaitForJobsToComplete = true);
+builder.Services.AddQuartz(q =>
+{
+    // Định nghĩa Job và Trigger
+    q.AddJob<SalarySheetJob>(opts => opts.WithIdentity("SalarySheetJob"));
+    q.AddTrigger(opts => opts
+        .ForJob("SalarySheetJob") // Ánh xạ với Job
+        .WithIdentity("SalarySheetTrigger")
+        .WithCronSchedule("0 0 0 1 * ?")); // Chạy lúc 0:00 ngày 1 mỗi tháng
+});
+
+
 var key = Encoding.ASCII.GetBytes("your_longer_secret_key_of_at_least_32_bytes");
 builder.Services.AddAuthentication(options =>
 {

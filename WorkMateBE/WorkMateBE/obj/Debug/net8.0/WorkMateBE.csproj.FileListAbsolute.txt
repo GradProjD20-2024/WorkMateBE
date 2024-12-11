@@ -479,5 +479,7 @@ D:\Study\WorkMateBE\WorkMateBE\WorkMateBE\obj\Debug\net8.0\ref\WorkMateBE.dll
 D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\WorkMateBE.staticwebassets.endpoints.json
 D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\obj\Debug\net8.0\staticwebassets\msbuild.WorkMateBE.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\WorkMateBE.staticwebassets.runtime.json
+D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\Quartz.dll
+D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\Quartz.Extensions.DependencyInjection.dll
+D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\Quartz.Extensions.Hosting.dll

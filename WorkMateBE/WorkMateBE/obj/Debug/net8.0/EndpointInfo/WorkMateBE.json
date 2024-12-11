@@ -1275,22 +1275,25 @@
             "type": "string",
             "nullable": true
           },
-          "description": {
+          "quantiy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "imageUrl": {
             "type": "string",
             "nullable": true
           },
-          "location": {
+          "price": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
             "type": "string",
             "nullable": true
           },
           "status": {
             "type": "integer",
             "format": "int32"
-          },
-          "employeeId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
           }
         },
         "additionalProperties": false

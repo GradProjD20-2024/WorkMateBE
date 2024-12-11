@@ -47,10 +47,11 @@ namespace WorkMateBE.Repositories
             if (existingAsset != null)
             {
                 existingAsset.Name = updatedAsset.Name;
-                existingAsset.Description = updatedAsset.Description;
-                existingAsset.Location = updatedAsset.Location;
+                existingAsset.Quantiy = updatedAsset.Quantiy;
+                existingAsset.ImageUrl = updatedAsset.ImageUrl;
                 existingAsset.Status = updatedAsset.Status;
-                existingAsset.EmployeeId = updatedAsset.EmployeeId;
+                existingAsset.Price = updatedAsset.Price;
+                existingAsset.Description = updatedAsset.Description;
 
                 _context.Assets.Update(existingAsset);
                 return Save();
