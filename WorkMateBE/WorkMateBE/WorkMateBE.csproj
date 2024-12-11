@@ -22,7 +22,6 @@
 
   <ItemGroup>
     <Folder Include="Dtos\AttendanceDto\" />
-    <Folder Include="Dtos\LeaveRequestDto\" />
     <Folder Include="Dtos\SalaryDto\" />
     <Folder Include="Services\Interfaces\" />
   </ItemGroup>

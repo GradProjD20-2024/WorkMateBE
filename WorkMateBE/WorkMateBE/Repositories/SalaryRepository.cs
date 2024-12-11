@@ -18,13 +18,14 @@ namespace WorkMateBE.Repositories
             var employee = _context.Employees.Where(p => p.Id == employeeId).FirstOrDefault();
             int baseSalary = employee.BaseSalary;
             int bonus = CalculateBonus(baseSalary, CountWorkingHoursReality(employeeId, month,year), CountWorkingHoursStandard(month, year));
+            int realitySalary = baseSalary / CountWorkingHoursStandard(month, year) * CountWorkingHoursReality(employeeId, month, year);
             int deduction = CalculateDeduction(employeeId, month, year);
             var Salary = new Salary
             {
                 BaseSalary = baseSalary,
                 Bonus = bonus,
                 Deduction = deduction,
-                Total = baseSalary + bonus - deduction,
+                Total = realitySalary + bonus - deduction,
                 Month = month,
                 Year = year,
                 EmployeeId = employeeId,

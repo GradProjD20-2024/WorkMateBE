@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jdFmykaDDBeSZagZNvXZgvK4cOmNVj/bC/LpipSODBg=",
+  "Hash": "i8PpPjUgQTXaoaI/xRZtkCwhxB+0xadt5StWiYr7nDI=",
   "Source": "WorkMateBE",
   "BasePath": "_content/WorkMateBE",
   "Mode": "Default",
@@ -36,6 +36,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\2f25d02e-53a5-48e4-8135-f45a389d8618.jpg"
+    },
+    {
+      "Identity": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\3d1c30bc-0c09-47f0-96de-800494de6fc7.png",
+      "SourceId": "WorkMateBE",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
+      "BasePath": "_content/WorkMateBE",
+      "RelativePath": "images/3d1c30bc-0c09-47f0-96de-800494de6fc7#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3s21lclrgd",
+      "Integrity": "rUakMvwncFSYhtQiD2l7dXsYrwn50oqx6GaqRaZ5Quk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\3d1c30bc-0c09-47f0-96de-800494de6fc7.png"
+    },
+    {
+      "Identity": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\95f89717-35b8-4d3f-8701-446f2c14ec59.png",
+      "SourceId": "WorkMateBE",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
+      "BasePath": "_content/WorkMateBE",
+      "RelativePath": "images/95f89717-35b8-4d3f-8701-446f2c14ec59#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dty5wz77do",
+      "Integrity": "fwQ5U8eBTQHoNUqFPljVp0PVPdfCUGdxuHJ/PNYczss=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\95f89717-35b8-4d3f-8701-446f2c14ec59.png"
+    },
+    {
+      "Identity": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\ae9f099d-6b1a-4ac2-989a-20f0e382df71.png",
+      "SourceId": "WorkMateBE",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
+      "BasePath": "_content/WorkMateBE",
+      "RelativePath": "images/ae9f099d-6b1a-4ac2-989a-20f0e382df71#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3s21lclrgd",
+      "Integrity": "rUakMvwncFSYhtQiD2l7dXsYrwn50oqx6GaqRaZ5Quk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\ae9f099d-6b1a-4ac2-989a-20f0e382df71.png"
     }
   ],
   "Endpoints": [
@@ -118,6 +181,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-jNMXU/nTnP14iECJOI1ZwEdPecb8y1YiIVyNRf9Tkvs="
+        }
+      ]
+    },
+    {
+      "Route": "images/3d1c30bc-0c09-47f0-96de-800494de6fc7.3s21lclrgd.png",
+      "AssetFile": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\3d1c30bc-0c09-47f0-96de-800494de6fc7.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "492021"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rUakMvwncFSYhtQiD2l7dXsYrwn50oqx6GaqRaZ5Quk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Dec 2024 15:33:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3s21lclrgd"
+        },
+        {
+          "Name": "label",
+          "Value": "images/3d1c30bc-0c09-47f0-96de-800494de6fc7.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rUakMvwncFSYhtQiD2l7dXsYrwn50oqx6GaqRaZ5Quk="
+        }
+      ]
+    },
+    {
+      "Route": "images/3d1c30bc-0c09-47f0-96de-800494de6fc7.png",
+      "AssetFile": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\3d1c30bc-0c09-47f0-96de-800494de6fc7.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "492021"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rUakMvwncFSYhtQiD2l7dXsYrwn50oqx6GaqRaZ5Quk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Dec 2024 15:33:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rUakMvwncFSYhtQiD2l7dXsYrwn50oqx6GaqRaZ5Quk="
+        }
+      ]
+    },
+    {
+      "Route": "images/95f89717-35b8-4d3f-8701-446f2c14ec59.dty5wz77do.png",
+      "AssetFile": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\95f89717-35b8-4d3f-8701-446f2c14ec59.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "492380"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fwQ5U8eBTQHoNUqFPljVp0PVPdfCUGdxuHJ/PNYczss=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Dec 2024 15:33:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dty5wz77do"
+        },
+        {
+          "Name": "label",
+          "Value": "images/95f89717-35b8-4d3f-8701-446f2c14ec59.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fwQ5U8eBTQHoNUqFPljVp0PVPdfCUGdxuHJ/PNYczss="
+        }
+      ]
+    },
+    {
+      "Route": "images/95f89717-35b8-4d3f-8701-446f2c14ec59.png",
+      "AssetFile": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\95f89717-35b8-4d3f-8701-446f2c14ec59.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "492380"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fwQ5U8eBTQHoNUqFPljVp0PVPdfCUGdxuHJ/PNYczss=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Dec 2024 15:33:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fwQ5U8eBTQHoNUqFPljVp0PVPdfCUGdxuHJ/PNYczss="
+        }
+      ]
+    },
+    {
+      "Route": "images/ae9f099d-6b1a-4ac2-989a-20f0e382df71.3s21lclrgd.png",
+      "AssetFile": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\ae9f099d-6b1a-4ac2-989a-20f0e382df71.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "492021"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rUakMvwncFSYhtQiD2l7dXsYrwn50oqx6GaqRaZ5Quk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Dec 2024 15:33:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3s21lclrgd"
+        },
+        {
+          "Name": "label",
+          "Value": "images/ae9f099d-6b1a-4ac2-989a-20f0e382df71.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rUakMvwncFSYhtQiD2l7dXsYrwn50oqx6GaqRaZ5Quk="
+        }
+      ]
+    },
+    {
+      "Route": "images/ae9f099d-6b1a-4ac2-989a-20f0e382df71.png",
+      "AssetFile": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\ae9f099d-6b1a-4ac2-989a-20f0e382df71.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "492021"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rUakMvwncFSYhtQiD2l7dXsYrwn50oqx6GaqRaZ5Quk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Dec 2024 15:33:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rUakMvwncFSYhtQiD2l7dXsYrwn50oqx6GaqRaZ5Quk="
         }
       ]
     }
