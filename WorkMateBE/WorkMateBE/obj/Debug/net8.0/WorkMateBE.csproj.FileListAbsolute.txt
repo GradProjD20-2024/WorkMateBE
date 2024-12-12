@@ -483,3 +483,4 @@ D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\WorkMateBE.staticw
 D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\Quartz.dll
 D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\Quartz.Extensions.DependencyInjection.dll
 D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\bin\Debug\net8.0\Quartz.Extensions.Hosting.dll
+D:\WorkMate\WorkMateBE\WorkMateBE\WorkMateBE\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

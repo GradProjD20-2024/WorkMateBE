@@ -57,7 +57,7 @@ namespace WorkMateBE.Repositories
         {
             var account = _context.Accounts.Where(p => p.EmployeeId == employeeId).FirstOrDefault();
             var attendances = _context.Attendances
-                .Where(p => p.AccountId == account.Id && p.CreatedAt.Month == month && p.CreatedAt.Year == year && p.Status == 1)
+                .Where(p => p.AccountId == account.Id && p.CreatedAt.Month == month && p.CreatedAt.Year == year && (p.Status == 1 || p.Status == 2))
                 .ToList();
 
             int hoursCounter = 0;
