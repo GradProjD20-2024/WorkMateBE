@@ -866,6 +866,16 @@
       }
     },
     "/api/LeaveReq": {
+      "get": {
+        "tags": [
+          "LeaveReq"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
       "post": {
         "tags": [
           "LeaveReq"
@@ -946,6 +956,29 @@
       "get": {
         "tags": [
           "LeaveReq"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/LeaveReq/{id}": {
+      "delete": {
+        "tags": [
+          "LeaveReq"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "responses": {
           "200": {

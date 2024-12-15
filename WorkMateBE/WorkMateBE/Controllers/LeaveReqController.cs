@@ -122,14 +122,15 @@ namespace WorkMateBE.Controllers
             }
             );
         }
-        [HttpDelete("id")]
+        [HttpDelete("{id}")]
         public IActionResult DeleteRequest(int id)
         {
-            if(_leaveReq.DeleteRequest(id, GetAccountIdFromToken()) == -2)
+            var result = _leaveReq.DeleteRequest(id, GetAccountIdFromToken());
+            if (result == -2)
             {
                 return Forbid();
             }
-            else if(_leaveReq.DeleteRequest(id, GetAccountIdFromToken()) == -1)
+            else if(result == -1)
             {
                 return BadRequest();
             }

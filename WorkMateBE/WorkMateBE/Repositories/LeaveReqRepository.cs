@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Net.WebSockets;
 using WorkMateBE.Data;
 using WorkMateBE.Dtos.LeaveRequestDto;
 using WorkMateBE.Interfaces;
@@ -17,7 +18,13 @@ namespace WorkMateBE.Repositories
         }
         public List<LeaveRequest> GetAllRequest()
         {
-            return _context.LeaveRequests.ToList();
+
+            var requests =  _context.LeaveRequests.ToList();
+            foreach (var request in requests)
+            {
+                request.Employee = _context.Employees.Find(request.EmployeeId);
+            }
+            return requests;
         }
         public bool CreateLeaveRequest(int accountId, PostRequestDto model)
         {
@@ -31,19 +38,8 @@ namespace WorkMateBE.Repositories
                 EmployeeId = account.EmployeeId,
                 Date = model.Date,
                 Reason = model.Reason,
-            };
-            var attendance = new Attendance
-            {
-                CheckIn = model.Date.Date.AddHours(8).AddMinutes(30),
-                CheckOut = model.Date.Date.AddHours(18),
-                Status = 2,
-                Late = 0,
-                AccountId = accountId,
-            };
-
-            
+            };            
             _context.Add(leaveRequest);
-            _context.Add(attendance);
             return Save();
         }
         public bool CheckLeaveRequestExist(int accountId, DateTime date)
@@ -58,11 +54,21 @@ namespace WorkMateBE.Repositories
         public bool Approve(int id)
         {
             var leaveRequest = _context.LeaveRequests.Find(id);
+            var account = _context.Accounts.Where(p => p.Id == leaveRequest.EmployeeId).FirstOrDefault();
             if (leaveRequest == null)
             {
                 return false;
             }
+            var attendance = new Attendance
+            {
+                CheckIn = leaveRequest.Date.Date.AddHours(8).AddMinutes(30),
+                CheckOut = leaveRequest.Date.Date.AddHours(18),
+                Status = 2,
+                Late = 0,
+                AccountId = account.Id,
+            };
             leaveRequest.Status = 1;
+            _context.Add(attendance);
             _context.Update(leaveRequest);
             return Save();
         }
@@ -87,16 +93,16 @@ namespace WorkMateBE.Repositories
         public int DeleteRequest(int id, int accountId)
         {
             var request = _context.LeaveRequests.Find(id);
+            if(request == null)
+            {
+                return -1;
+            }
             var account = _context.Accounts.Find(accountId);
             if(request.EmployeeId != account.EmployeeId)
             {
                 return -2;
             }
             
-            if (request == null)
-            {
-                return -1;
-            }
             if (request.Status != 0)
             {
                 return -1;

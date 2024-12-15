@@ -524,6 +524,16 @@
   },
   {
     "ContainingType": "WorkMateBE.Controllers.LeaveReqController",
+    "Method": "GetRequest",
+    "RelativePath": "api/LeaveReq",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WorkMateBE.Controllers.LeaveReqController",
     "Method": "CreateLeaveRequest",
     "RelativePath": "api/LeaveReq",
     "HttpMethod": "POST",
@@ -533,6 +543,22 @@
       {
         "Name": "model",
         "Type": "WorkMateBE.Dtos.LeaveRequestDto.PostRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WorkMateBE.Controllers.LeaveReqController",
+    "Method": "DeleteRequest",
+    "RelativePath": "api/LeaveReq/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
