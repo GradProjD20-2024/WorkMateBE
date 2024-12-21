@@ -4,5 +4,7 @@
     {
         public string? AvatarUrl { get; set; }
 
+        public string? FaceId { get; set; }
+
     }
 }

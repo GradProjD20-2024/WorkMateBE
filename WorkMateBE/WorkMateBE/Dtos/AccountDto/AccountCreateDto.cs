@@ -20,7 +20,8 @@ namespace WorkMateBE.Dtos.AccountDto
 
         //[Required(ErrorMessage = "FaceUrl is required")]
         //[Url(ErrorMessage = "Invalid URL format for FaceUrl")]
-        public string FaceUrl { get; set; }
+        public string? FaceUrl { get; set; }
+        public string? FaceId { get; set; }
 
         [Range(0, 1, ErrorMessage = "Status must be either 0 (Inactive) or 1 (Active)")]
         public int Status { get; set; }

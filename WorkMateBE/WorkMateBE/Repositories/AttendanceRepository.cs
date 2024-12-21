@@ -17,16 +17,6 @@ namespace WorkMateBE.Repositories
         }
         public async Task<int> CheckIn(int accountId, byte[] photo)
         {
-            var checkFace = await GetResultAsync(photo);
-
-            if(checkFace == -1)
-            {
-                return -1;
-            }
-            if(checkFace == 0 || checkFace != accountId)
-            {
-                return 0;
-            }
             int late = 0;
             DateTime now = DateTime.Now;
             DateTime targetTime = new DateTime(now.Year, now.Month, now.Day, 8, 30, 0);
@@ -108,16 +98,6 @@ namespace WorkMateBE.Repositories
             if (attendance.CheckOut != null)
             {
                 return -2;
-            }
-            var checkFace = await GetResultAsync(photo);
-
-            if (checkFace == -1)
-            {
-                return -1;
-            }
-            if (checkFace == 0 || checkFace != attendance.AccountId)
-            {
-                return 0;
             }
             var now = DateTime.Now;
             DateTime targetTime = new DateTime(now.Year, now.Month, now.Day, 18, 0, 0);
