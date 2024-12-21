@@ -148,6 +148,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WorkMateBE.Controllers.AccountController",
+    "Method": "UpdateFaceId",
+    "RelativePath": "api/Account/UpdateFaceId",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "WorkMateBE.Dtos.AccountDto.UpdateFaceIdDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WorkMateBE.Controllers.AssetController",
     "Method": "GetAllAssets",
     "RelativePath": "api/Asset",

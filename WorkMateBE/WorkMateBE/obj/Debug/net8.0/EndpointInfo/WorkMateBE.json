@@ -249,6 +249,47 @@
         }
       }
     },
+    "/api/Account/UpdateFaceId": {
+      "put": {
+        "tags": [
+          "Account"
+        ],
+        "parameters": [
+          {
+            "name": "accountId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateFaceIdDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateFaceIdDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateFaceIdDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Asset": {
       "get": {
         "tags": [
@@ -1352,10 +1393,6 @@
           "avatarUrl": {
             "type": "string",
             "nullable": true
-          },
-          "faceId": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1524,6 +1561,16 @@
           "status": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateFaceIdDto": {
+        "type": "object",
+        "properties": {
+          "faceId": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
