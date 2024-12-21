@@ -254,11 +254,6 @@
         "Name": "accountId",
         "Type": "System.Int32",
         "IsRequired": true
-      },
-      {
-        "Name": "file",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -275,11 +270,6 @@
         "Name": "attendanceId",
         "Type": "System.Int32",
         "IsRequired": true
-      },
-      {
-        "Name": "file",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []

@@ -390,26 +390,6 @@
             }
           }
         ],
-        "requestBody": {
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "file": {
-                    "type": "string",
-                    "format": "binary"
-                  }
-                }
-              },
-              "encoding": {
-                "file": {
-                  "style": "form"
-                }
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "Success"
@@ -433,26 +413,6 @@
             }
           }
         ],
-        "requestBody": {
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "file": {
-                    "type": "string",
-                    "format": "binary"
-                  }
-                }
-              },
-              "encoding": {
-                "file": {
-                  "style": "form"
-                }
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "Success"
@@ -1312,11 +1272,13 @@
             "type": "string"
           },
           "newPassword": {
-            "minLength": 6,
+            "minLength": 8,
+            "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&#])[A-Za-z\\d@$!%*?&#]{8,}$",
             "type": "string"
           },
           "confirmPassword": {
-            "minLength": 6,
+            "minLength": 8,
+            "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&#])[A-Za-z\\d@$!%*?&#]{8,}$",
             "type": "string"
           }
         },
@@ -1346,6 +1308,10 @@
             "nullable": true
           },
           "faceUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "faceId": {
             "type": "string",
             "nullable": true
           },
@@ -1384,6 +1350,10 @@
         "type": "object",
         "properties": {
           "avatarUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "faceId": {
             "type": "string",
             "nullable": true
           }

@@ -26,12 +26,17 @@ namespace WorkMateBE.Repositories
             }
             return requests;
         }
-        public bool CreateLeaveRequest(int accountId, PostRequestDto model)
+        public int CreateLeaveRequest(int accountId, PostRequestDto model)
         {
             if(CheckLeaveRequestExist(accountId, model.Date))
             {
-                return false;
+                return -1;
             }
+            if(model.Date.DayOfWeek == DayOfWeek.Saturday || model.Date.DayOfWeek == DayOfWeek.Sunday || (model.Date - DateTime.Now).TotalDays < 3)
+            {
+                return -2;
+            }
+
             var account = _context.Accounts.Find(accountId);
             var leaveRequest = new LeaveRequest
             {   
@@ -40,7 +45,11 @@ namespace WorkMateBE.Repositories
                 Reason = model.Reason,
             };            
             _context.Add(leaveRequest);
-            return Save();
+            if (!Save())
+            {
+                return -1;
+            };
+            return 1;
         }
         public bool CheckLeaveRequestExist(int accountId, DateTime date)
         {

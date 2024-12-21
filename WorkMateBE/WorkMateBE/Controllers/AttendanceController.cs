@@ -20,7 +20,7 @@ namespace WorkMateBE.Controllers
         }
 
         [HttpPost("check-in/{accountId}")]
-        public async Task<IActionResult> CheckIn(int accountId, IFormFile file)
+        public async Task<IActionResult> CheckIn(int accountId)
         {
             // Kiểm tra tài khoản có tồn tại không
             var account = _accountRepository.GetAccountById(accountId);
@@ -33,25 +33,6 @@ namespace WorkMateBE.Controllers
                     Data = null
                 });
             }
-
-            // Kiểm tra file tải lên
-            if (file == null || file.Length == 0)
-            {
-                return BadRequest(new ApiResponse
-                {
-                    StatusCode = 400,
-                    Message = "No file uploaded",
-                    Data = null
-                });
-            }
-
-            // Đọc tệp tin thành byte[]
-            byte[] fileBytes;
-            using (var memoryStream = new MemoryStream())
-            {
-                await file.CopyToAsync(memoryStream);
-                fileBytes = memoryStream.ToArray();
-            }
             var now = DateTime.Now;
             if(_attendanceRepository.CheckDay(now, accountId) == 1)
             {
@@ -63,22 +44,13 @@ namespace WorkMateBE.Controllers
                 });
             }
             // Gọi hàm GetResultAsync để xử lý tệp
-            var result = await _attendanceRepository.CheckIn(accountId, fileBytes);
+            var result = await _attendanceRepository.CheckIn(accountId);
             if(result == -1)
             {
                 return BadRequest(new ApiResponse
                 {
                     StatusCode = 400,
-                    Message = "Something went wrong while Checkin",
-                    Data = null
-                });
-            }
-            if (result == 0)
-            {
-                return Ok(new ApiResponse
-                {
-                    StatusCode = 200,
-                    Message = "Face ID is invalid",
+                    Message = "Today is day off?",
                     Data = null
                 });
             }
@@ -93,7 +65,7 @@ namespace WorkMateBE.Controllers
         }
 
         [HttpPost("check-out/{attendanceId}")]
-        public async Task<IActionResult> CheckOut(int attendanceId, IFormFile file)
+        public async Task<IActionResult> CheckOut(int attendanceId)
         {
             // Kiểm tra tài khoản có tồn tại không
             var attendance = _attendanceRepository.GetAttendanceById(attendanceId);
@@ -107,27 +79,7 @@ namespace WorkMateBE.Controllers
                 });
             }
 
-            // Kiểm tra file tải lên
-            if (file == null || file.Length == 0)
-            {
-                return BadRequest(new ApiResponse
-                {
-                    StatusCode = 400,
-                    Message = "No file uploaded",
-                    Data = null
-                });
-            }
-
-            // Đọc tệp tin thành byte[]
-            byte[] fileBytes;
-            using (var memoryStream = new MemoryStream())
-            {
-                await file.CopyToAsync(memoryStream);
-                fileBytes = memoryStream.ToArray();
-            }
-
-            // Gọi hàm GetResultAsync để xử lý tệp
-            var result = await _attendanceRepository.CheckOut(attendanceId, fileBytes);
+            var result = await _attendanceRepository.CheckOut(attendanceId);
             if (result == -2)
             {
                 return BadRequest(new ApiResponse

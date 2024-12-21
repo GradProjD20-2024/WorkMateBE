@@ -5,7 +5,7 @@ namespace WorkMateBE.Interfaces
 {
     public interface ILeaveReqRepository
     {
-        bool CreateLeaveRequest(int accountId, PostRequestDto model);
+        int CreateLeaveRequest(int accountId, PostRequestDto model);
         bool Approve(int id);
         bool Reject(int id);
         List<LeaveRequest> GetLeaveRequestByAccountId(int accountId);

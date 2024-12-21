@@ -41,7 +41,7 @@ namespace WorkMateBE.Controllers
             {
                 return BadRequest(ModelState);
             }
-            if (!_leaveReq.CreateLeaveRequest(GetAccountIdFromToken(), model))
+            if (_leaveReq.CreateLeaveRequest(GetAccountIdFromToken(), model) == -1)
             {
                 return BadRequest(new ApiResponse
                 {
@@ -51,6 +51,17 @@ namespace WorkMateBE.Controllers
                 }
                 );
             }
+            if (_leaveReq.CreateLeaveRequest(GetAccountIdFromToken(), model) == -2)
+            {
+                return BadRequest(new ApiResponse
+                {
+                    StatusCode = 400,
+                    Message = "Invalid Date!",
+                    Data = null
+                }
+                );
+            }
+
             return Ok(new ApiResponse
             {
                 StatusCode = 200,
