@@ -2,6 +2,6 @@
 {
     public class UpdateFaceIdDto
     {
-        public string FaceId { get; set; }
+        public string Face_id { get; set; }
     }
 }

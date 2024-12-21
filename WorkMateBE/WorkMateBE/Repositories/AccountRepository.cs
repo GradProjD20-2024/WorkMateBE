@@ -157,7 +157,7 @@ namespace WorkMateBE.Repositories
         public bool UpdateFaceId(int accountId, UpdateFaceIdDto model)
         {
             var account = GetAccountById(accountId);
-            account.FaceId = model.FaceId;
+            account.Face_id = model.Face_id;
             _context.Update(account);
             return Save();
         }

@@ -9,7 +9,7 @@ namespace WorkMateBE.Dtos.AccountDto
         public int RoleId { get; set; }
         public string? AvatarUrl { get; set; }
         public string FaceUrl { get; set; }
-        public string FaceId {  get; set; }
+        public string Face_id {  get; set; }
         public int Status { get; set; }
         public int EmployeeId { get; set; }
     }
