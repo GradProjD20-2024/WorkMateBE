@@ -154,6 +154,13 @@ namespace WorkMateBE.Repositories
 
             return new string(stringChars);
         }
+        public bool UpdateFaceId(int accountId, UpdateFaceIdDto model)
+        {
+            var account = GetAccountById(accountId);
+            account.FaceId = model.FaceId;
+            _context.Update(account);
+            return Save();
+        }
         // Lưu thay đổi vào cơ sở dữ liệu
         private bool Save()
         {

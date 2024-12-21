@@ -17,5 +17,6 @@ namespace WorkMateBE.Interfaces
         bool CheckEmployee(int employeeId);
         bool ChangePassword(int accountId, string newPassword);
         string ResetPassword(int accountId);
+        bool UpdateFaceId(int accountId, UpdateFaceIdDto model);
     }
 }

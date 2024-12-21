@@ -348,7 +348,42 @@ namespace WorkMateBE.Controllers
             });
 
         }
+        [HttpPut("UpdateFaceId")]
+        public IActionResult UpdateFaceId([FromQuery] int accountId, [FromBody] UpdateFaceIdDto model)
+        {
+            if(GetRoleFromToken() != 1)
+            {
+                return Forbid();
+            }
+            if(_accountRepository.GetAccountById(accountId) == null)
+            {
+                return NotFound(new ApiResponse
+                {
+                    StatusCode = 404,
+                    Message = "Account ID not found",
+                    Data = null
+                });
+            }
 
+            if(!_accountRepository.UpdateFaceId(accountId, model))
+            {
+                return BadRequest(new ApiResponse
+                {
+                    StatusCode = 400,
+                    Message = "Something went wrong",
+                    Data = null
+                });
+            }
+            return Ok(new ApiResponse
+            {
+                StatusCode = 200,
+                Message = "Update face-id Success",
+                Data = model.FaceId
+            });
+        }
+
+
+        #region
         private string GenerateJwtToken(Account account)
         {
             // Tạo các claims chứa thông tin role và id
@@ -417,6 +452,7 @@ namespace WorkMateBE.Controllers
             throw new UnauthorizedAccessException("Role not found in token");
 
         }
+        #endregion
     }
 }
  
