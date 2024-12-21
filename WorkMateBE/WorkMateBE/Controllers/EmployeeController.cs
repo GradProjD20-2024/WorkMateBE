@@ -24,6 +24,7 @@ namespace WorkMateBE.Controllers
         }
 
         // GET: api/employee
+        [Authorize(Roles = "1")]
         [HttpGet]
         public IActionResult GetAllEmployees()
         {
@@ -60,6 +61,7 @@ namespace WorkMateBE.Controllers
         }
 
         // POST: api/employee
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult CreateEmployee([FromBody] EmployeeCreateDto employeeDto)
         {
@@ -91,6 +93,7 @@ namespace WorkMateBE.Controllers
         }
 
         // PUT: api/employee/{id}
+        [Authorize(Roles = "1")]
         [HttpPut("{id}")]
         public IActionResult UpdateEmployee(int id, [FromBody] EmployeeCreateDto employeeDto)
         {
@@ -129,6 +132,7 @@ namespace WorkMateBE.Controllers
                 Data = null
             });
         }
+
         [Authorize(Roles = "1")]
         [HttpGet("department/{departmentId}")]
         public IActionResult GetEmployeesByDeparment(int departmentId)
@@ -151,6 +155,7 @@ namespace WorkMateBE.Controllers
             });
         }
         // DELETE: api/employee/{id}
+        [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult DeleteEmployee(int id)
         {

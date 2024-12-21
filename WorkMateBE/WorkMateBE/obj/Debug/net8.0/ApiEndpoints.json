@@ -266,17 +266,11 @@
   {
     "ContainingType": "WorkMateBE.Controllers.AttendanceController",
     "Method": "CheckIn",
-    "RelativePath": "api/Attendance/check-in/{accountId}",
+    "RelativePath": "api/Attendance/check-in",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "accountId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

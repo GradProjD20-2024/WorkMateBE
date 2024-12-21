@@ -124,7 +124,6 @@ namespace WorkMateBE.Controllers
         }
 
         // PUT: api/Post/{postId}
-
         [HttpPut("{postId}")]
         public IActionResult UpdatePost(int postId, [FromBody] PostUpdateDto postUpdate)
         {
@@ -206,7 +205,6 @@ namespace WorkMateBE.Controllers
         }
 
         // DELETE: api/Post/{postId}
-        [Authorize(Roles = "1,2")]
         [HttpDelete("{postId}")]
         public IActionResult DeletePost(int postId)
         {
@@ -223,8 +221,7 @@ namespace WorkMateBE.Controllers
             }
             var accountId = GetAccountIdFromToken();
 
-            // Kiểm tra quyền: chỉ cho phép cập nhật nếu accountId khớp với post.AccountId
-            if (accountId != existingPost.AccountId)
+            if (accountId != existingPost.AccountId && GetRoleFromToken() != 1)
             {
                 return Forbid();
             }
@@ -252,6 +249,7 @@ namespace WorkMateBE.Controllers
             return employee.FullName;
             
         }
+        #region
         private int GetAccountIdFromToken()
         {
             var identity = HttpContext.User.Identity as ClaimsIdentity;
@@ -270,5 +268,31 @@ namespace WorkMateBE.Controllers
 
             throw new UnauthorizedAccessException("AccountId not found in token");
         }
+        private int GetRoleFromToken()
+        {
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
+
+            if (identity != null)
+            {
+                // Tìm claim có type là "Role"
+                var roleClaim = identity.FindFirst("Role");
+                if (roleClaim != null)
+                {
+                    // Chuyển đổi giá trị role từ chuỗi thành int
+                    if (int.TryParse(roleClaim.Value, out var role))
+                    {
+                        return role;
+                    }
+                    else
+                    {
+                        throw new UnauthorizedAccessException($"Invalid role value: {roleClaim.Value}");
+                    }
+                }
+            }
+
+            throw new UnauthorizedAccessException("Role not found in token");
+
+        }
+        #endregion
     }
 }

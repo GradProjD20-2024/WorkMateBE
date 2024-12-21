@@ -49,9 +49,9 @@ namespace WorkMateBE.Controllers
         [HttpGet("{id}")]
         public IActionResult GetAccountById(int id)
         {
-            var currentUserId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value ?? "0");
-            var currentUserRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
-            if (currentUserRole == "1" || currentUserRole == "2" || currentUserId == id)
+            var currentUserId = GetAccountIdFromToken();
+            var currentUserRole = GetRoleFromToken();
+            if (currentUserRole == 1 || currentUserId == id)
             {
                 var account = _accountRepository.GetAccountById(id);
                 if (account == null)
@@ -169,6 +169,13 @@ namespace WorkMateBE.Controllers
         [HttpPut("{id}")]
         public IActionResult UpdateAccount(int id, [FromBody] AccountUpdateDto accountDto)
         {
+            if (GetAccountIdFromToken() != id)
+            {
+                if (id != GetAccountIdFromToken())
+                {
+                    return Forbid();
+                }
+            }
             if (accountDto == null)
                 return BadRequest(ModelState);
 
@@ -181,14 +188,7 @@ namespace WorkMateBE.Controllers
                     Message = "Account ID not found",
                     Data = null
                 });
-            if (GetRoleFromToken() != 1)
-            {
-                if (id != GetAccountIdFromToken())
-                {
-                    return Forbid();
-                }
-            }
-          
+   
             var account = _mapper.Map<Account>(accountDto);
             if (!_accountRepository.UpdateAccount(id, account))
             {
@@ -383,7 +383,7 @@ namespace WorkMateBE.Controllers
         }
 
 
-        #region
+        
         private string GenerateJwtToken(Account account)
         {
             // Tạo các claims chứa thông tin role và id
@@ -409,6 +409,7 @@ namespace WorkMateBE.Controllers
             var tokenHandler = new JwtSecurityTokenHandler();
             return tokenHandler.WriteToken(token);
         }
+        #region
         private int GetAccountIdFromToken()
         {
             var identity = HttpContext.User.Identity as ClaimsIdentity;

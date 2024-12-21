@@ -3,6 +3,7 @@ using WorkMateBE.Interfaces;
 using System.Threading.Tasks;
 using WorkMateBE.Responses;
 using WorkMateBE.Models;
+using System.Security.Claims;
 
 namespace WorkMateBE.Controllers
 {
@@ -19,9 +20,10 @@ namespace WorkMateBE.Controllers
             _accountRepository = accountRepository;
         }
 
-        [HttpPost("check-in/{accountId}")]
-        public async Task<IActionResult> CheckIn(int accountId)
+        [HttpPost("check-in")]
+        public async Task<IActionResult> CheckIn()
         {
+            var accountId = GetAccountIdFromToken();
             // Kiểm tra tài khoản có tồn tại không
             var account = _accountRepository.GetAccountById(accountId);
             if (account == null)
@@ -67,8 +69,13 @@ namespace WorkMateBE.Controllers
         [HttpPost("check-out/{attendanceId}")]
         public async Task<IActionResult> CheckOut(int attendanceId)
         {
+            var accountId = GetAccountIdFromToken();
             // Kiểm tra tài khoản có tồn tại không
             var attendance = _attendanceRepository.GetAttendanceById(attendanceId);
+           if(attendance.AccountId != accountId)
+            {
+                return Forbid();
+            }
             if (attendance == null)
             {
                 return NotFound(new ApiResponse
@@ -138,6 +145,50 @@ namespace WorkMateBE.Controllers
             });
         }
 
+        #region
+        private int GetAccountIdFromToken()
+        {
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
 
+            if (identity != null)
+            {
+                var accountIdClaim = identity.FindFirst("Id");
+                if (accountIdClaim != null)
+                {
+                    if (int.TryParse(accountIdClaim.Value, out var accountId))
+                    {
+                        return accountId;
+                    }
+                }
+            }
+
+            throw new UnauthorizedAccessException("AccountId not found in token");
+        }
+        private int GetRoleFromToken()
+        {
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
+
+            if (identity != null)
+            {
+                // Tìm claim có type là "Role"
+                var roleClaim = identity.FindFirst("Role");
+                if (roleClaim != null)
+                {
+                    // Chuyển đổi giá trị role từ chuỗi thành int
+                    if (int.TryParse(roleClaim.Value, out var role))
+                    {
+                        return role;
+                    }
+                    else
+                    {
+                        throw new UnauthorizedAccessException($"Invalid role value: {roleClaim.Value}");
+                    }
+                }
+            }
+
+            throw new UnauthorizedAccessException("Role not found in token");
+
+        }
+        #endregion
     }
 }

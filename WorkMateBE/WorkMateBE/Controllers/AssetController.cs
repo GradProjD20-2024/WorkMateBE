@@ -24,7 +24,7 @@ namespace WorkMateBE.Controllers
         }
 
         // GET: api/asset
-        [Authorize(Roles = "1,2")]
+        [Authorize(Roles = "1")]
         [HttpGet]
         public IActionResult GetAllAssets()
         {
@@ -39,7 +39,7 @@ namespace WorkMateBE.Controllers
         }
 
         // GET: api/asset/{id}
-        [Authorize(Roles = "1,2")]
+        [Authorize(Roles = "1")]
         [HttpGet("{id}")]
         public IActionResult GetAssetById(int id)
         {
@@ -64,7 +64,7 @@ namespace WorkMateBE.Controllers
         }
 
         // POST: api/asset
-        [Authorize(Roles = "1,2")]
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult CreateAsset([FromBody] AssetCreateDto assetDto)
         {
@@ -88,7 +88,7 @@ namespace WorkMateBE.Controllers
         }
 
         // PUT: api/asset/{id}
-        [Authorize(Roles = "1,2")]
+        [Authorize(Roles = "1")]
         [HttpPut("{id}")]
         public IActionResult UpdateAsset(int id, [FromBody] AssetCreateDto assetDto)
         {
@@ -124,7 +124,7 @@ namespace WorkMateBE.Controllers
         }
 
         // DELETE: api/asset/{id}
-        [Authorize(Roles = "1,2")]
+        [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult DeleteAsset(int id)
         {

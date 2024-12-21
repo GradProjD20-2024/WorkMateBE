@@ -22,6 +22,7 @@ namespace WorkMateBE.Controllers
         }
 
         // GET: api/department
+        [Authorize(Roles = "1")]
         [HttpGet]
         public IActionResult GetAllDepartments()
         {
@@ -36,6 +37,7 @@ namespace WorkMateBE.Controllers
         }
 
         // GET: api/department/{id}
+        [Authorize(Roles = "1")]
         [HttpGet("{id}")]
         public IActionResult GetDepartmentById(int id)
         {
@@ -58,6 +60,7 @@ namespace WorkMateBE.Controllers
 
         // POST: api/department
         /*[Authorize(Roles = "Admin")]*/
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult CreateDepartment([FromBody] DepartmentCreateDto departmentDto)
         {

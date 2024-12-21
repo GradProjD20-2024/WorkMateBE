@@ -108,7 +108,7 @@ namespace WorkMateBE.Controllers
             }
 
             var accountId = GetAccountIdFromToken();
-            if (accountId != comment.AccountId)
+            if (accountId != comment.AccountId && GetRoleFromToken() != 1)
             {
                 return Forbid();
             }
@@ -131,6 +131,7 @@ namespace WorkMateBE.Controllers
             });
         }
 
+        #region
         private int GetAccountIdFromToken()
         {
             var identity = HttpContext.User.Identity as ClaimsIdentity;
@@ -149,5 +150,33 @@ namespace WorkMateBE.Controllers
 
             throw new UnauthorizedAccessException("AccountId not found in token");
         }
+        private int GetRoleFromToken()
+        {
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
+
+            if (identity != null)
+            {
+                // Tìm claim có type là "Role"
+                var roleClaim = identity.FindFirst("Role");
+                if (roleClaim != null)
+                {
+                    // Chuyển đổi giá trị role từ chuỗi thành int
+                    if (int.TryParse(roleClaim.Value, out var role))
+                    {
+                        return role;
+                    }
+                    else
+                    {
+                        throw new UnauthorizedAccessException($"Invalid role value: {roleClaim.Value}");
+                    }
+                }
+            }
+
+            throw new UnauthorizedAccessException("Role not found in token");
+
+        }
+        #endregion
+
     }
+
 }

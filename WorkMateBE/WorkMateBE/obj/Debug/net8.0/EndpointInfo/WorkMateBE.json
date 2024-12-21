@@ -415,21 +415,10 @@
         }
       }
     },
-    "/api/Attendance/check-in/{accountId}": {
+    "/api/Attendance/check-in": {
       "post": {
         "tags": [
           "Attendance"
-        ],
-        "parameters": [
-          {
-            "name": "accountId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
         ],
         "responses": {
           "200": {
@@ -1329,8 +1318,7 @@
         "required": [
           "email",
           "employeeId",
-          "password",
-          "roleId"
+          "password"
         ],
         "type": "object",
         "properties": {
@@ -1363,10 +1351,6 @@
             "format": "int32"
           },
           "employeeId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "roleId": {
             "type": "integer",
             "format": "int32"
           }

@@ -27,6 +27,7 @@ namespace WorkMateBE.Repositories
         {
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(account.Password);
             account.Password = hashedPassword;
+            account.RoleId = 2;
             _context.Add(account);
             return Save();
         }

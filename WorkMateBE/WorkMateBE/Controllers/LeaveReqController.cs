@@ -18,7 +18,7 @@ namespace WorkMateBE.Controllers
         {
             _leaveReq = leaveReq;
         }
-
+        [Authorize(Roles = "1")]
         [HttpGet]
         public IActionResult GetRequest()
         {
@@ -74,7 +74,7 @@ namespace WorkMateBE.Controllers
         [HttpPut("approve/{id}")]
         public IActionResult ApproveRequest (int id)
         {
-            if (GetRoleFromToken() != 1 && GetRoleFromToken() != 2)
+            if (GetRoleFromToken() != 1)
             {
                 return Forbid();
             }
@@ -100,7 +100,7 @@ namespace WorkMateBE.Controllers
         [HttpPut("reject/{id}")]
         public IActionResult RejectRequest(int id)
         {
-            if(GetRoleFromToken() != 1 && GetRoleFromToken() != 2)
+            if(GetRoleFromToken() != 1)
             {
                 return Forbid();
             }
@@ -133,6 +133,7 @@ namespace WorkMateBE.Controllers
             }
             );
         }
+        [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult DeleteRequest(int id)
         {

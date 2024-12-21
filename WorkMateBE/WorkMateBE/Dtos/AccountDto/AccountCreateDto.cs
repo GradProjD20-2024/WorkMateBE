@@ -28,7 +28,5 @@ namespace WorkMateBE.Dtos.AccountDto
 
         [Required(ErrorMessage = "EmployeeId is required")]
         public int EmployeeId { get; set; }
-        [Required(ErrorMessage = "Role is required")]
-        public int RoleId { get; set; }
     }
 }
