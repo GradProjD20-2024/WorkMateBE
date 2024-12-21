@@ -1568,7 +1568,7 @@
       "UpdateFaceIdDto": {
         "type": "object",
         "properties": {
-          "faceId": {
+          "face_id": {
             "type": "string",
             "nullable": true
           }

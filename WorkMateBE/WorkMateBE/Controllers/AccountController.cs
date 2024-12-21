@@ -378,7 +378,7 @@ namespace WorkMateBE.Controllers
             {
                 StatusCode = 200,
                 Message = "Update face-id Success",
-                Data = model.FaceId
+                Data = model.Face_id
             });
         }
 
