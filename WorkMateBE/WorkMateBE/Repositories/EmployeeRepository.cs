@@ -49,6 +49,7 @@ namespace WorkMateBE.Repositories
             employee.Position = employeeUpdate.Position;
             employee.Address = employeeUpdate.Address;
             employee.Status = employeeUpdate.Status;
+            employee.BaseSalary = employeeUpdate.BaseSalary;
             employee.DepartmentId = employeeUpdate.DepartmentId;
             _context.Update(employee);
             var saved = _context.SaveChanges();
