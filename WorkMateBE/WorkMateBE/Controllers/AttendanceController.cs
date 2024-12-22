@@ -50,15 +50,15 @@ namespace WorkMateBE.Controllers
             }
             // Gọi hàm GetResultAsync để xử lý tệp
             var result = await _attendanceRepository.CheckIn(accountId);
-            //if(result == -1)
-            //{
-            //    return BadRequest(new ApiResponse
-            //    {
-            //        StatusCode = 400,
-            //        Message = "Today is day off?",
-            //        Data = null
-            //    });
-            //}
+            if (result == -1)
+            {
+                return BadRequest(new ApiResponse
+                {
+                    StatusCode = 400,
+                    Message = "Today is day off?",
+                    Data = null
+                });
+            }
 
             // Trả về kết quả check-in
             return Ok(new ApiResponse

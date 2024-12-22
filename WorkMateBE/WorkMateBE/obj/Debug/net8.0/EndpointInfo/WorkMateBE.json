@@ -1450,6 +1450,14 @@
             "type": "string",
             "nullable": true
           },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "gender": {
+            "type": "integer",
+            "format": "int32"
+          },
           "phone": {
             "type": "string",
             "nullable": true

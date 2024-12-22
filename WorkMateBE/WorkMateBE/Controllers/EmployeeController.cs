@@ -52,6 +52,7 @@ namespace WorkMateBE.Controllers
                 });
 
             var employeeDto = _mapper.Map<EmployeeGetDto>(employee);
+            
             return Ok(new ApiResponse
             {
                 StatusCode = 200,
