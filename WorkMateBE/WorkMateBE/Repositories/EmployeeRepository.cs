@@ -47,6 +47,7 @@ namespace WorkMateBE.Repositories
             var employee = _context.Employees.Where(p => p.Id == employeeId).FirstOrDefault();
             employee.FullName = employeeUpdate.FullName;
             employee.ImageUrl = employeeUpdate.ImageUrl;
+            employee.Gender = employeeUpdate.Gender;
             employee.Phone = employeeUpdate.Phone;
             employee.Birthday = employeeUpdate.Birthday;
             employee.IdentificationId = employeeUpdate.IdentificationId;
