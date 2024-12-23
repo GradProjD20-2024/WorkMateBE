@@ -23,8 +23,12 @@ namespace WorkMateBE.Repositories
         {
             var employee = _context.Employees.Where(p => p.Id == employeeId).FirstOrDefault();
             var account = _context.Accounts.Where(p => p.EmployeeId == employeeId).FirstOrDefault();
+            if(account != null)
+            {
+                _context.Remove(account);
+            }
             _context.Remove(employee);
-            _context.Remove(account);
+            
             var saved = _context.SaveChanges();
             return saved > 0 ? true : false;
         }
