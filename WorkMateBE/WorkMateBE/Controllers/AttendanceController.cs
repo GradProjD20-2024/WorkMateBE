@@ -129,8 +129,13 @@ namespace WorkMateBE.Controllers
         [HttpGet("{accountId}")]
         public IActionResult GetAttendanceByAccountId (int accountId)
         {
+            
             var account = _accountRepository.GetAccountById(accountId);
-            if (account == null)
+            if (accountId != GetAccountIdFromToken() && GetRoleFromToken() != 1)
+            {
+                return Forbid();
+            }
+                if (account == null)
             {
                 return NotFound(new ApiResponse
                 {
@@ -139,7 +144,8 @@ namespace WorkMateBE.Controllers
                     Data = null
                 });
             }
-            var attendances = _attendanceRepository.GetAttendancesByAccountId(accountId);
+            
+                var attendances = _attendanceRepository.GetAttendancesByAccountId(accountId);
             return Ok(new ApiResponse
             {
                 StatusCode = 200,

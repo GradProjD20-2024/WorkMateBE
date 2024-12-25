@@ -37,7 +37,6 @@ namespace WorkMateBE.Controllers
         }
 
         // GET: api/department/{id}
-        [Authorize(Roles = "1")]
         [HttpGet("{id}")]
         public IActionResult GetDepartmentById(int id)
         {

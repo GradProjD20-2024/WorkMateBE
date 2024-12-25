@@ -42,7 +42,16 @@ namespace WorkMateBE.Repositories
         public Employee GetEmployeeById(int employeeId)
         {
             var employee = _context.Employees.Find(employeeId);
-            employee.Department = _context.Departments.Find(employee.DepartmentId);
+            if (employee == null)
+            {
+                return null;
+            }
+            var departments = _context.Departments.Find(employee.DepartmentId);
+            if (departments != null)
+            {
+                employee.Department = departments;
+            }
+            
             return employee;
         }
 
