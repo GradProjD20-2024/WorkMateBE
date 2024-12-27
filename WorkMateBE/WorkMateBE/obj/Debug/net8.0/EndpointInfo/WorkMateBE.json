@@ -1563,6 +1563,10 @@
           "face_id": {
             "type": "string",
             "nullable": true
+          },
+          "faceUrl": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
