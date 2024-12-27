@@ -133,7 +133,6 @@ namespace WorkMateBE.Controllers
             }
             );
         }
-        [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult DeleteRequest(int id)
         {

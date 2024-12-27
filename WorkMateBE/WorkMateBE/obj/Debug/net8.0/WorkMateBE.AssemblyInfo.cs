@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WorkMateBE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91c8d2eee1468734005e3402c8722465ed3ef0f7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+14896035dc9e1d70358d7cdeacbdc881f46bd3e9")]
 [assembly: System.Reflection.AssemblyProductAttribute("WorkMateBE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WorkMateBE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
