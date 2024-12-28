@@ -159,6 +159,7 @@ namespace WorkMateBE.Repositories
         {
             var account = GetAccountById(accountId);
             account.Face_id = model.Face_id;
+            account.FaceUrl = model.FaceUrl;
             _context.Update(account);
             return Save();
         }

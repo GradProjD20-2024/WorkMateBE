@@ -1340,7 +1340,7 @@
             "type": "string",
             "nullable": true
           },
-          "faceId": {
+          "face_Id": {
             "type": "string",
             "nullable": true
           },
@@ -1561,6 +1561,10 @@
         "type": "object",
         "properties": {
           "face_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "faceUrl": {
             "type": "string",
             "nullable": true
           }

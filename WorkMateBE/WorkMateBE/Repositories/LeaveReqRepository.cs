@@ -75,10 +75,11 @@ namespace WorkMateBE.Repositories
                 Status = 2,
                 Late = 0,
                 AccountId = account.Id,
+                CreatedAt = DateTime.Now
             };
+            
             leaveRequest.Status = 1;
             _context.Add(attendance);
-            Console.WriteLine("------------------------" + attendance.Id);
             _context.Update(leaveRequest);
             return Save();
         }
