@@ -108,7 +108,7 @@ namespace WorkMateBE.Repositories
         }
         public Account GetAccountByEmployeeId (int employeeId)
         {
-            var account = _context.Accounts.Where(p => p.EmployeeId == employeeId).FirstOrDefault();
+            var account = _context.Accounts.Where(p => p.EmployeeId == employeeId && p.Status == 1).FirstOrDefault();
             return account;
         }
         public bool CheckEmployee(int employeeId)

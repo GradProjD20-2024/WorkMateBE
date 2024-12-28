@@ -23,8 +23,12 @@ namespace WorkMateBE.Repositories
         {
             var employee = _context.Employees.Where(p => p.Id == employeeId).FirstOrDefault();
             var account = _context.Accounts.Where(p => p.EmployeeId == employeeId).FirstOrDefault();
+            if(account != null)
+            {
+                _context.Remove(account);
+            }
             _context.Remove(employee);
-            _context.Remove(account);
+            
             var saved = _context.SaveChanges();
             return saved > 0 ? true : false;
         }
@@ -38,7 +42,16 @@ namespace WorkMateBE.Repositories
         public Employee GetEmployeeById(int employeeId)
         {
             var employee = _context.Employees.Find(employeeId);
-            employee.Department = _context.Departments.Find(employee.DepartmentId);
+            if (employee == null)
+            {
+                return null;
+            }
+            var departments = _context.Departments.Find(employee.DepartmentId);
+            if (departments != null)
+            {
+                employee.Department = departments;
+            }
+            
             return employee;
         }
 

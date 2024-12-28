@@ -78,6 +78,7 @@ namespace WorkMateBE.Repositories
             };
             leaveRequest.Status = 1;
             _context.Add(attendance);
+            Console.WriteLine("------------------------" + attendance.Id);
             _context.Update(leaveRequest);
             return Save();
         }

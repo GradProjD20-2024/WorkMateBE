@@ -113,7 +113,7 @@ namespace WorkMateBE.Controllers
 
 
         // POST: api/account
-        [Authorize(Roles = "1")]
+        //[Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult CreateAccount([FromBody] AccountCreateDto accountDto)
         {

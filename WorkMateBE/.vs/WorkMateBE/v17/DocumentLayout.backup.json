@@ -26,8 +26,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 85,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -36,7 +40,7 @@
               "RelativeDocumentMoniker": "WorkMateBE\\Models\\Employee.cs",
               "ToolTip": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\Models\\Employee.cs",
               "RelativeToolTip": "WorkMateBE\\Models\\Employee.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-23T04:12:12.152Z",
               "EditorCaption": ""
@@ -51,12 +55,7 @@
               "RelativeToolTip": "WorkMateBE\\Repositories\\EmployeeRepository.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAhwCwAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T04:11:19.737Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+              "WhenOpened": "2024-12-23T04:11:19.737Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "WorkMateBE\\Helper\\MappingProfiles.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T04:27:44.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-14T04:27:44.366Z"
             },
             {
               "$type": "Document",

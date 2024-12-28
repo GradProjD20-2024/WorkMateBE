@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EPW8V3MnSaIm9n1woL6qZDGmcKzmSwUIWNUM7PSxj8Q=",
+  "Hash": "UIe/OTVuwjzSYMmvPbByf+c2aZqnP9Io62vsoL98P68=",
   "Source": "WorkMateBE",
   "BasePath": "_content/WorkMateBE",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "WorkMateBE\\wwwroot",
       "Source": "WorkMateBE",
-      "ContentRoot": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
+      "ContentRoot": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
       "BasePath": "_content/WorkMateBE",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\2f25d02e-53a5-48e4-8135-f45a389d8618.jpg",
+      "Identity": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\2f25d02e-53a5-48e4-8135-f45a389d8618.jpg",
       "SourceId": "WorkMateBE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
+      "ContentRoot": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
       "BasePath": "_content/WorkMateBE",
       "RelativePath": "images/2f25d02e-53a5-48e4-8135-f45a389d8618#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -38,10 +38,10 @@
       "OriginalItemSpec": "wwwroot\\images\\2f25d02e-53a5-48e4-8135-f45a389d8618.jpg"
     },
     {
-      "Identity": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\33e3d2ed-f741-409b-848f-525120ab8c22.png",
+      "Identity": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\33e3d2ed-f741-409b-848f-525120ab8c22.png",
       "SourceId": "WorkMateBE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
+      "ContentRoot": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
       "BasePath": "_content/WorkMateBE",
       "RelativePath": "images/33e3d2ed-f741-409b-848f-525120ab8c22#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -59,10 +59,10 @@
       "OriginalItemSpec": "wwwroot\\images\\33e3d2ed-f741-409b-848f-525120ab8c22.png"
     },
     {
-      "Identity": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\3d1c30bc-0c09-47f0-96de-800494de6fc7.png",
+      "Identity": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\3d1c30bc-0c09-47f0-96de-800494de6fc7.png",
       "SourceId": "WorkMateBE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
+      "ContentRoot": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
       "BasePath": "_content/WorkMateBE",
       "RelativePath": "images/3d1c30bc-0c09-47f0-96de-800494de6fc7#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -80,10 +80,31 @@
       "OriginalItemSpec": "wwwroot\\images\\3d1c30bc-0c09-47f0-96de-800494de6fc7.png"
     },
     {
-      "Identity": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\8c6048bb-506e-4ade-a378-081efdd82f2f.jpg",
+      "Identity": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\5b3b74cb-cf81-46c4-8a00-c16f469c7289.jpg",
       "SourceId": "WorkMateBE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
+      "ContentRoot": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
+      "BasePath": "_content/WorkMateBE",
+      "RelativePath": "images/5b3b74cb-cf81-46c4-8a00-c16f469c7289#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ccfic45uvn",
+      "Integrity": "1PXSJT1MR2z0d4/7Ebh8eqPx8lVkZ9OY+Pmqh03BT4E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\5b3b74cb-cf81-46c4-8a00-c16f469c7289.jpg"
+    },
+    {
+      "Identity": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\8c6048bb-506e-4ade-a378-081efdd82f2f.jpg",
+      "SourceId": "WorkMateBE",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
       "BasePath": "_content/WorkMateBE",
       "RelativePath": "images/8c6048bb-506e-4ade-a378-081efdd82f2f#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -101,10 +122,10 @@
       "OriginalItemSpec": "wwwroot\\images\\8c6048bb-506e-4ade-a378-081efdd82f2f.jpg"
     },
     {
-      "Identity": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\95f89717-35b8-4d3f-8701-446f2c14ec59.png",
+      "Identity": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\95f89717-35b8-4d3f-8701-446f2c14ec59.png",
       "SourceId": "WorkMateBE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
+      "ContentRoot": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
       "BasePath": "_content/WorkMateBE",
       "RelativePath": "images/95f89717-35b8-4d3f-8701-446f2c14ec59#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -122,10 +143,31 @@
       "OriginalItemSpec": "wwwroot\\images\\95f89717-35b8-4d3f-8701-446f2c14ec59.png"
     },
     {
-      "Identity": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\ae9f099d-6b1a-4ac2-989a-20f0e382df71.png",
+      "Identity": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\9ad3afd9-6796-405f-8262-1418eba8d111.jpg",
       "SourceId": "WorkMateBE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
+      "ContentRoot": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
+      "BasePath": "_content/WorkMateBE",
+      "RelativePath": "images/9ad3afd9-6796-405f-8262-1418eba8d111#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5minkk0q3x",
+      "Integrity": "/aEPkFZuWRl8QeSt2pIXfRxRy9fnkFBRhhms/OIQ4ZY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\9ad3afd9-6796-405f-8262-1418eba8d111.jpg"
+    },
+    {
+      "Identity": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\ae9f099d-6b1a-4ac2-989a-20f0e382df71.png",
+      "SourceId": "WorkMateBE",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
       "BasePath": "_content/WorkMateBE",
       "RelativePath": "images/ae9f099d-6b1a-4ac2-989a-20f0e382df71#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -143,10 +185,10 @@
       "OriginalItemSpec": "wwwroot\\images\\ae9f099d-6b1a-4ac2-989a-20f0e382df71.png"
     },
     {
-      "Identity": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\e6e83a3c-dfd7-401c-a774-148992c81c76.png",
+      "Identity": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\e6e83a3c-dfd7-401c-a774-148992c81c76.png",
       "SourceId": "WorkMateBE",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
+      "ContentRoot": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\",
       "BasePath": "_content/WorkMateBE",
       "RelativePath": "images/e6e83a3c-dfd7-401c-a774-148992c81c76#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -167,7 +209,7 @@
   "Endpoints": [
     {
       "Route": "images/2f25d02e-53a5-48e4-8135-f45a389d8618.c4nuz4j5l3.jpg",
-      "AssetFile": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\2f25d02e-53a5-48e4-8135-f45a389d8618.jpg",
+      "AssetFile": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\2f25d02e-53a5-48e4-8135-f45a389d8618.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -188,7 +230,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Dec 2024 15:59:20 GMT"
+          "Value": "Mon, 23 Dec 2024 04:10:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -212,7 +254,7 @@
     },
     {
       "Route": "images/2f25d02e-53a5-48e4-8135-f45a389d8618.jpg",
-      "AssetFile": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\2f25d02e-53a5-48e4-8135-f45a389d8618.jpg",
+      "AssetFile": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\2f25d02e-53a5-48e4-8135-f45a389d8618.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -233,7 +275,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Dec 2024 15:59:20 GMT"
+          "Value": "Mon, 23 Dec 2024 04:10:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -249,7 +291,7 @@
     },
     {
       "Route": "images/33e3d2ed-f741-409b-848f-525120ab8c22.nenbuxibk3.png",
-      "AssetFile": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\33e3d2ed-f741-409b-848f-525120ab8c22.png",
+      "AssetFile": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\33e3d2ed-f741-409b-848f-525120ab8c22.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -270,7 +312,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 15:47:11 GMT"
+          "Value": "Mon, 23 Dec 2024 04:10:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -294,7 +336,7 @@
     },
     {
       "Route": "images/33e3d2ed-f741-409b-848f-525120ab8c22.png",
-      "AssetFile": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\33e3d2ed-f741-409b-848f-525120ab8c22.png",
+      "AssetFile": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\33e3d2ed-f741-409b-848f-525120ab8c22.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -315,7 +357,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 15:47:11 GMT"
+          "Value": "Mon, 23 Dec 2024 04:10:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -331,7 +373,7 @@
     },
     {
       "Route": "images/3d1c30bc-0c09-47f0-96de-800494de6fc7.3s21lclrgd.png",
-      "AssetFile": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\3d1c30bc-0c09-47f0-96de-800494de6fc7.png",
+      "AssetFile": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\3d1c30bc-0c09-47f0-96de-800494de6fc7.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -352,7 +394,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 09 Dec 2024 15:33:45 GMT"
+          "Value": "Mon, 23 Dec 2024 04:10:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -376,7 +418,7 @@
     },
     {
       "Route": "images/3d1c30bc-0c09-47f0-96de-800494de6fc7.png",
-      "AssetFile": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\3d1c30bc-0c09-47f0-96de-800494de6fc7.png",
+      "AssetFile": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\3d1c30bc-0c09-47f0-96de-800494de6fc7.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -397,7 +439,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 09 Dec 2024 15:33:45 GMT"
+          "Value": "Mon, 23 Dec 2024 04:10:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -412,8 +454,90 @@
       ]
     },
     {
+      "Route": "images/5b3b74cb-cf81-46c4-8a00-c16f469c7289.ccfic45uvn.jpg",
+      "AssetFile": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\5b3b74cb-cf81-46c4-8a00-c16f469c7289.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1530"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1PXSJT1MR2z0d4/7Ebh8eqPx8lVkZ9OY+Pmqh03BT4E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 26 Dec 2024 02:17:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ccfic45uvn"
+        },
+        {
+          "Name": "label",
+          "Value": "images/5b3b74cb-cf81-46c4-8a00-c16f469c7289.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1PXSJT1MR2z0d4/7Ebh8eqPx8lVkZ9OY+Pmqh03BT4E="
+        }
+      ]
+    },
+    {
+      "Route": "images/5b3b74cb-cf81-46c4-8a00-c16f469c7289.jpg",
+      "AssetFile": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\5b3b74cb-cf81-46c4-8a00-c16f469c7289.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1530"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1PXSJT1MR2z0d4/7Ebh8eqPx8lVkZ9OY+Pmqh03BT4E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 26 Dec 2024 02:17:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1PXSJT1MR2z0d4/7Ebh8eqPx8lVkZ9OY+Pmqh03BT4E="
+        }
+      ]
+    },
+    {
       "Route": "images/8c6048bb-506e-4ade-a378-081efdd82f2f.acjwcqauw5.jpg",
-      "AssetFile": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\8c6048bb-506e-4ade-a378-081efdd82f2f.jpg",
+      "AssetFile": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\8c6048bb-506e-4ade-a378-081efdd82f2f.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -434,7 +558,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 15:47:59 GMT"
+          "Value": "Mon, 23 Dec 2024 04:10:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -458,7 +582,7 @@
     },
     {
       "Route": "images/8c6048bb-506e-4ade-a378-081efdd82f2f.jpg",
-      "AssetFile": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\8c6048bb-506e-4ade-a378-081efdd82f2f.jpg",
+      "AssetFile": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\8c6048bb-506e-4ade-a378-081efdd82f2f.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -479,7 +603,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 15:47:59 GMT"
+          "Value": "Mon, 23 Dec 2024 04:10:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -495,7 +619,7 @@
     },
     {
       "Route": "images/95f89717-35b8-4d3f-8701-446f2c14ec59.dty5wz77do.png",
-      "AssetFile": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\95f89717-35b8-4d3f-8701-446f2c14ec59.png",
+      "AssetFile": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\95f89717-35b8-4d3f-8701-446f2c14ec59.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -516,7 +640,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 09 Dec 2024 15:33:59 GMT"
+          "Value": "Mon, 23 Dec 2024 04:10:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -540,7 +664,7 @@
     },
     {
       "Route": "images/95f89717-35b8-4d3f-8701-446f2c14ec59.png",
-      "AssetFile": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\95f89717-35b8-4d3f-8701-446f2c14ec59.png",
+      "AssetFile": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\95f89717-35b8-4d3f-8701-446f2c14ec59.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -561,7 +685,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 09 Dec 2024 15:33:59 GMT"
+          "Value": "Mon, 23 Dec 2024 04:10:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -576,8 +700,90 @@
       ]
     },
     {
+      "Route": "images/9ad3afd9-6796-405f-8262-1418eba8d111.5minkk0q3x.jpg",
+      "AssetFile": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\9ad3afd9-6796-405f-8262-1418eba8d111.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/aEPkFZuWRl8QeSt2pIXfRxRy9fnkFBRhhms/OIQ4ZY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 26 Dec 2024 02:17:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5minkk0q3x"
+        },
+        {
+          "Name": "label",
+          "Value": "images/9ad3afd9-6796-405f-8262-1418eba8d111.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/aEPkFZuWRl8QeSt2pIXfRxRy9fnkFBRhhms/OIQ4ZY="
+        }
+      ]
+    },
+    {
+      "Route": "images/9ad3afd9-6796-405f-8262-1418eba8d111.jpg",
+      "AssetFile": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\9ad3afd9-6796-405f-8262-1418eba8d111.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/aEPkFZuWRl8QeSt2pIXfRxRy9fnkFBRhhms/OIQ4ZY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 26 Dec 2024 02:17:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/aEPkFZuWRl8QeSt2pIXfRxRy9fnkFBRhhms/OIQ4ZY="
+        }
+      ]
+    },
+    {
       "Route": "images/ae9f099d-6b1a-4ac2-989a-20f0e382df71.3s21lclrgd.png",
-      "AssetFile": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\ae9f099d-6b1a-4ac2-989a-20f0e382df71.png",
+      "AssetFile": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\ae9f099d-6b1a-4ac2-989a-20f0e382df71.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -598,7 +804,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 09 Dec 2024 15:33:59 GMT"
+          "Value": "Mon, 23 Dec 2024 04:10:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -622,7 +828,7 @@
     },
     {
       "Route": "images/ae9f099d-6b1a-4ac2-989a-20f0e382df71.png",
-      "AssetFile": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\ae9f099d-6b1a-4ac2-989a-20f0e382df71.png",
+      "AssetFile": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\ae9f099d-6b1a-4ac2-989a-20f0e382df71.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -643,7 +849,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 09 Dec 2024 15:33:59 GMT"
+          "Value": "Mon, 23 Dec 2024 04:10:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -659,7 +865,7 @@
     },
     {
       "Route": "images/e6e83a3c-dfd7-401c-a774-148992c81c76.nenbuxibk3.png",
-      "AssetFile": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\e6e83a3c-dfd7-401c-a774-148992c81c76.png",
+      "AssetFile": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\e6e83a3c-dfd7-401c-a774-148992c81c76.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -680,7 +886,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Dec 2024 02:27:19 GMT"
+          "Value": "Mon, 23 Dec 2024 04:10:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -704,7 +910,7 @@
     },
     {
       "Route": "images/e6e83a3c-dfd7-401c-a774-148992c81c76.png",
-      "AssetFile": "D:\\WorkMate\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\e6e83a3c-dfd7-401c-a774-148992c81c76.png",
+      "AssetFile": "D:\\Study\\WorkMateBE\\WorkMateBE\\WorkMateBE\\wwwroot\\images\\e6e83a3c-dfd7-401c-a774-148992c81c76.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -725,7 +931,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Dec 2024 02:27:19 GMT"
+          "Value": "Mon, 23 Dec 2024 04:10:39 GMT"
         },
         {
           "Name": "Cache-Control",
