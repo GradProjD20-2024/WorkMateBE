@@ -79,7 +79,7 @@ namespace WorkMateBE.Repositories
             };
             
             leaveRequest.Status = 1;
-            _context.Attendances.Add(attendance);
+            _context.Add(attendance);
             _context.Update(leaveRequest);
             return Save();
         }
