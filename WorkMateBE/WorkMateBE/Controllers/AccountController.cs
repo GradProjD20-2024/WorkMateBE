@@ -257,23 +257,18 @@ namespace WorkMateBE.Controllers
             });
         }
         [Authorize]
-        [HttpPost("change-password/{accountId}")]
-        public IActionResult ChangePassword([FromBody] AccountChangePw pass, int accountId)
+        [HttpPost("change-password")]
+        public IActionResult ChangePassword([FromBody] AccountChangePw pass)
         {
             var currentUserId = GetAccountIdFromToken();
             // Kiểm tra quyền: chỉ cho phép cập nhật nếu accountId khớp với post.AccountId
-            if (accountId != currentUserId)
-            {
-                return Forbid();
-            }
-
 
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var account = _accountRepository.GetAccountById(accountId);
+            var account = _accountRepository.GetAccountById(currentUserId);
             if (!BCrypt.Net.BCrypt.Verify(pass.OldPassword, account.Password))
             {
                 return BadRequest(new ApiResponse
@@ -293,7 +288,7 @@ namespace WorkMateBE.Controllers
                     Data = null
                 });
             }
-            if (!_accountRepository.ChangePassword(accountId, pass.NewPassword))
+            if (!_accountRepository.ChangePassword(currentUserId, pass.NewPassword))
             {
                 return BadRequest(new ApiResponse
                 {

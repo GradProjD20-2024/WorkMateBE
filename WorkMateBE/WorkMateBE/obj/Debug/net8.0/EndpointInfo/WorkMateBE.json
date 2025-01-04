@@ -184,21 +184,10 @@
         }
       }
     },
-    "/api/Account/change-password/{accountId}": {
+    "/api/Account/change-password": {
       "post": {
         "tags": [
           "Account"
-        ],
-        "parameters": [
-          {
-            "name": "accountId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
         ],
         "requestBody": {
           "content": {

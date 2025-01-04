@@ -81,7 +81,7 @@
   {
     "ContainingType": "WorkMateBE.Controllers.AccountController",
     "Method": "ChangePassword",
-    "RelativePath": "api/Account/change-password/{accountId}",
+    "RelativePath": "api/Account/change-password",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -89,11 +89,6 @@
       {
         "Name": "pass",
         "Type": "WorkMateBE.Dtos.AccountDto.AccountChangePw",
-        "IsRequired": true
-      },
-      {
-        "Name": "accountId",
-        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
