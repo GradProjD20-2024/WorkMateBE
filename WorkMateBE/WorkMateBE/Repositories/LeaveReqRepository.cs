@@ -63,7 +63,7 @@ namespace WorkMateBE.Repositories
         public bool Approve(int id)
         {
             var leaveRequest = _context.LeaveRequests.Find(id);
-            var account = _context.Accounts.Where(p => p.Id == leaveRequest.EmployeeId).FirstOrDefault();
+            var account = _context.Accounts.Where(p => p.EmployeeId == leaveRequest.EmployeeId).FirstOrDefault();
             if (leaveRequest == null)
             {
                 return false;
