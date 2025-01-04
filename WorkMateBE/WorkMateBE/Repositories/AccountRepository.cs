@@ -133,7 +133,7 @@ namespace WorkMateBE.Repositories
         {
             var account = GetAccountById(accountId);
             string newPassword = RandomPassword();
-            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(RandomPassword());
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(newPassword);
             account.Password = hashedPassword;
             _context.Update(account);
             if (!Save())
