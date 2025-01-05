@@ -90,6 +90,15 @@ namespace WorkMateBE.Controllers
             }
 
             var result = await _attendanceRepository.CheckOut(attendanceId);
+            if (result == -3)
+            {
+                return BadRequest(new ApiResponse
+                {
+                    StatusCode = 400,
+                    Message = "Wrong Date",
+                    Data = null
+                });
+            }
             if (result == -2)
             {
                 return BadRequest(new ApiResponse

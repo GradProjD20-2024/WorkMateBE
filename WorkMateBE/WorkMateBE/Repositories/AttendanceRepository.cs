@@ -46,6 +46,10 @@ namespace WorkMateBE.Repositories
         public async Task<int> CheckOut(int attendanceId)
         {
             var attendance = _context.Attendances.Where(p => p.Id == attendanceId).FirstOrDefault();
+            if (attendance.CheckIn.Date != DateTime.Now.Date)
+            {
+                return -3;
+            }
             if (attendance.CheckOut != null)
             {
                 return -2;
